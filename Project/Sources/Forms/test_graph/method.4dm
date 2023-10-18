@@ -32,7 +32,7 @@ Case of
 		$pieChart.sizeTitle:=18
 		$pieChart.withLight:=True:C214
 		
-		graphPicture:=$pieChart.drawGraph()
+		Form:C1466.graphPicture:=$pieChart.drawGraph()
 		
 End case 
 

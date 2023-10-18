@@ -42,7 +42,7 @@
 					"top": 11,
 					"width": 708,
 					"height": 705,
-					"dataSource": "graphPicture",
+					"dataSource": "Form:C1466.graphPicture",
 					"dataSourceTypeHint": "picture"
 				}
 			}
