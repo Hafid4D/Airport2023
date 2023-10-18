@@ -1,0 +1,597 @@
+{
+	"$4d": {
+		"version": "1",
+		"kind": "form"
+	},
+	"windowSizingX": "variable",
+	"windowSizingY": "variable",
+	"windowMinWidth": 0,
+	"windowMinHeight": 0,
+	"windowMaxWidth": 32767,
+	"windowMaxHeight": 32767,
+	"rightMargin": 0,
+	"bottomMargin": 0,
+	"events": [
+		"onLoad",
+		"onPageChange",
+		"onValidate",
+		"onClick",
+		"onDoubleClick",
+		"onOutsideCall",
+		"onBeginDragOver",
+		"onDragOver",
+		"onDrop",
+		"onAfterKeystroke",
+		"onMenuSelect",
+		"onPluginArea",
+		"onAfterEdit",
+		"onTimer",
+		"onBoundVariableChange"
+	],
+	"windowTitle": "window title",
+	"destination": "detailScreen",
+	"pages": [
+		{
+			"objects": {
+				"bkgd": {
+					"type": "rectangle",
+					"top": 0,
+					"left": 0,
+					"width": 1015,
+					"height": 733,
+					"stroke": "transparent",
+					"fill": "#191970",
+					"sizingX": "grow",
+					"sizingY": "grow"
+				}
+			}
+		},
+		{
+			"objects": {
+				"Rectangle5": {
+					"type": "rectangle",
+					"top": 32,
+					"left": 59,
+					"width": 903,
+					"height": 592,
+					"stroke": "#FFFFFF",
+					"fill": "#DFDFDF",
+					"sizingY": "grow",
+					"sizingX": "grow"
+				},
+				"Rectangle4": {
+					"type": "rectangle",
+					"top": 229,
+					"left": 1,
+					"width": 60,
+					"height": 200,
+					"stroke": "#FFFFFF",
+					"fill": "#c0c0c0",
+					"sizingY": "move"
+				},
+				"Rectangle6": {
+					"type": "rectangle",
+					"top": 34,
+					"left": 501,
+					"width": 60,
+					"height": 160,
+					"stroke": "#FFFFFF",
+					"fill": "#c0c0c0"
+				},
+				"Rectangle3": {
+					"type": "rectangle",
+					"top": 34,
+					"left": 1,
+					"width": 60,
+					"height": 160,
+					"stroke": "#FFFFFF",
+					"fill": "#c0c0c0"
+				},
+				"Rectangle": {
+					"type": "rectangle",
+					"top": 0,
+					"left": 0,
+					"width": 962,
+					"height": 34,
+					"stroke": "transparent",
+					"fill": "#337DB6",
+					"sizingX": "grow"
+				},
+				"Static Picture4": {
+					"type": "picture",
+					"top": 5,
+					"left": 65,
+					"width": 24,
+					"height": 24,
+					"picture": "/RESOURCES/image/categoryIcon/airportTower.png",
+					"pictureFormat": "scaled"
+				},
+				"Text": {
+					"type": "text",
+					"text": "City",
+					"top": 85,
+					"left": 76,
+					"width": 83,
+					"height": 16,
+					"class": "label"
+				},
+				"Input": {
+					"type": "input",
+					"left": 76,
+					"top": 105,
+					"width": 113,
+					"height": 17,
+					"dataSource": "Form:C1466.Airport.city",
+					"class": "",
+					"fill": "transparent",
+					"borderStyle": "none",
+					"enterable": false,
+					"focusable": false,
+					"contextMenu": "none"
+				},
+				"Text1": {
+					"type": "text",
+					"text": "Location",
+					"top": 38,
+					"left": 76,
+					"width": 163,
+					"height": 16,
+					"class": "label"
+				},
+				"Input1": {
+					"type": "input",
+					"left": 76,
+					"top": 56,
+					"width": 292,
+					"height": 17,
+					"dataSource": "Form:C1466.Airport.location",
+					"class": "",
+					"enterable": false,
+					"focusable": false,
+					"contextMenu": "none",
+					"fill": "transparent",
+					"borderStyle": "none"
+				},
+				"Text2": {
+					"type": "text",
+					"text": "Country",
+					"top": 85,
+					"left": 191,
+					"width": 83,
+					"height": 16,
+					"class": "label"
+				},
+				"Input2": {
+					"type": "input",
+					"left": 217,
+					"top": 105,
+					"width": 152,
+					"height": 17,
+					"dataSource": "Form:C1466.Airport.country.name",
+					"class": "",
+					"borderStyle": "none",
+					"fill": "transparent",
+					"enterable": false,
+					"focusable": false,
+					"contextMenu": "none"
+				},
+				"Input3": {
+					"type": "input",
+					"left": 191,
+					"top": 105,
+					"width": 23,
+					"height": 17,
+					"dataSource": "Form:C1466.Airport.country.tinyFlag",
+					"dataSourceTypeHint": "picture",
+					"pictureFormat": "proportionalCenter",
+					"enterable": false,
+					"focusable": false,
+					"contextMenu": "none",
+					"borderStyle": "none",
+					"fill": "transparent"
+				},
+				"Clock": {
+					"type": "subform",
+					"top": 437,
+					"left": 63,
+					"width": 146,
+					"height": 144,
+					"sizingX": "fixed",
+					"sizingY": "move",
+					"dataSourceTypeHint": "integer",
+					"detailForm": "TimeDisplay",
+					"focusable": false,
+					"hideFocusRing": true,
+					"doubleClickInRowAction": "editSubrecord",
+					"selectionMode": "multiple",
+					"printFrame": "variable",
+					"events": [
+						"onLoad"
+					],
+					"dataSource": "Form:C1466.time"
+				},
+				"Subform1": {
+					"type": "subform",
+					"top": 585,
+					"left": 63,
+					"width": 147,
+					"height": 35,
+					"dataSource": "Form:C1466.time",
+					"dataSourceTypeHint": "integer",
+					"detailForm": "TimeDisplayLCD",
+					"focusable": false,
+					"hideFocusRing": true,
+					"doubleClickInRowAction": "editSubrecord",
+					"selectionMode": "multiple",
+					"printFrame": "variable",
+					"events": [
+						"onLoad"
+					],
+					"sizingX": "fixed",
+					"sizingY": "move"
+				},
+				"Text6": {
+					"type": "text",
+					"text": "IATA",
+					"top": 145,
+					"left": 76,
+					"width": 40,
+					"height": 16,
+					"class": "label"
+				},
+				"Input4": {
+					"type": "input",
+					"left": 76,
+					"top": 164,
+					"width": 40,
+					"height": 17,
+					"dataSource": "Form:C1466.Airport.codeIATA",
+					"class": "",
+					"enterable": false,
+					"focusable": false,
+					"contextMenu": "none",
+					"fill": "transparent",
+					"borderStyle": "none"
+				},
+				"Text7": {
+					"type": "text",
+					"text": "International airport",
+					"top": 38,
+					"left": 570,
+					"width": 163,
+					"height": 16,
+					"class": "label"
+				},
+				"Text8": {
+					"type": "text",
+					"text": "Domestic",
+					"top": 85,
+					"left": 570,
+					"width": 163,
+					"height": 16,
+					"class": "label"
+				},
+				"Text10": {
+					"type": "text",
+					"text": "ICAO \t",
+					"top": 145,
+					"left": 124,
+					"width": 40,
+					"height": 16,
+					"class": "label"
+				},
+				"Input6": {
+					"type": "input",
+					"left": 124,
+					"top": 164,
+					"width": 40,
+					"height": 17,
+					"dataSource": "Form:C1466.Airport.codeICAO",
+					"class": "",
+					"enterable": false,
+					"focusable": false,
+					"contextMenu": "none",
+					"fill": "transparent",
+					"borderStyle": "none"
+				},
+				"Text9": {
+					"type": "text",
+					"text": "CAA",
+					"top": 145,
+					"left": 177,
+					"width": 40,
+					"height": 16,
+					"class": "label"
+				},
+				"Input5": {
+					"type": "input",
+					"left": 177,
+					"top": 164,
+					"width": 40,
+					"height": 17,
+					"dataSource": "Form:C1466.Airport.codeCAA",
+					"class": "",
+					"enterable": false,
+					"focusable": false,
+					"contextMenu": "none",
+					"fill": "transparent",
+					"borderStyle": "none"
+				},
+				"Text11": {
+					"type": "text",
+					"text": "Information",
+					"top": 8,
+					"left": 598,
+					"width": 336,
+					"height": 16,
+					"textAlign": "left",
+					"fontWeight": "bold",
+					"stroke": "#FFFFFF"
+				},
+				"mapAirport": {
+					"type": "webArea",
+					"left": 562,
+					"top": 309,
+					"width": 400,
+					"height": 314,
+					"borderStyle": "none",
+					"sizingY": "grow",
+					"sizingX": "grow",
+					"webEngine": "embedded"
+				},
+				"Text13": {
+					"type": "text",
+					"text": "International hub",
+					"top": 38,
+					"left": 720,
+					"width": 163,
+					"height": 16,
+					"class": "label"
+				},
+				"Text14": {
+					"type": "text",
+					"text": "State / Province",
+					"top": 85,
+					"left": 399,
+					"width": 103,
+					"height": 16,
+					"class": "label"
+				},
+				"Input7": {
+					"type": "input",
+					"left": 399,
+					"top": 105,
+					"width": 101,
+					"height": 17,
+					"dataSource": "Form:C1466.Airport.stateProvince",
+					"class": "",
+					"fill": "transparent",
+					"borderStyle": "none",
+					"enterable": false,
+					"focusable": false,
+					"contextMenu": "none"
+				},
+				"Text15": {
+					"type": "text",
+					"text": "Icône Montagne + stats sur les altitudes des aéroports / les trier, regarder combien il y en a et voir dans quel quintil on se trouve ici",
+					"top": 663,
+					"left": 11,
+					"width": 674,
+					"height": 31,
+					"stroke": "#fffacd"
+				},
+				"Text4": {
+					"type": "text",
+					"text": "Airport",
+					"top": 10,
+					"left": 98,
+					"width": 191,
+					"height": 16,
+					"stroke": "#FFFFFF",
+					"fontWeight": "bold"
+				},
+				"Static Picture8": {
+					"type": "picture",
+					"top": 5,
+					"left": 562,
+					"width": 24,
+					"height": 24,
+					"picture": "/RESOURCES/image/categoryIcon/information.png",
+					"pictureFormat": "scaled"
+				},
+				"Static Picture2": {
+					"type": "picture",
+					"top": 43,
+					"left": 12,
+					"width": 36,
+					"height": 36,
+					"picture": "/RESOURCES/image/categoryIcon/passport.png",
+					"pictureFormat": "scaled"
+				},
+				"Static Picture5": {
+					"type": "picture",
+					"top": 45,
+					"left": 510,
+					"width": 40,
+					"height": 40,
+					"picture": "/RESOURCES/image/categoryIcon/worldmap.png",
+					"pictureFormat": "scaled"
+				},
+				"Rectangle1": {
+					"type": "rectangle",
+					"top": 429,
+					"left": 1,
+					"width": 60,
+					"height": 195,
+					"stroke": "#FFFFFF",
+					"fill": "#c0c0c0",
+					"sizingY": "move"
+				},
+				"Rectangle2": {
+					"type": "rectangle",
+					"top": 228,
+					"left": 500,
+					"width": 60,
+					"height": 395,
+					"stroke": "#FFFFFF",
+					"fill": "#c0c0c0",
+					"sizingY": "grow"
+				},
+				"Rectangle7": {
+					"type": "rectangle",
+					"top": 194,
+					"left": 0,
+					"width": 962,
+					"height": 34,
+					"stroke": "transparent",
+					"fill": "#337DB6",
+					"sizingX": "grow"
+				},
+				"Text3": {
+					"type": "text",
+					"text": "Geometry",
+					"top": 203,
+					"left": 262,
+					"width": 191,
+					"height": 16,
+					"stroke": "#FFFFFF",
+					"fontWeight": "bold"
+				},
+				"Static Picture1": {
+					"type": "picture",
+					"top": 233,
+					"left": 12,
+					"width": 36,
+					"height": 36,
+					"picture": "/RESOURCES/image/categoryIcon/mountains.png",
+					"pictureFormat": "scaled"
+				},
+				"Static Picture3": {
+					"type": "picture",
+					"top": 433,
+					"left": 12,
+					"width": 36,
+					"height": 36,
+					"picture": "/RESOURCES/image/categoryIcon/clock.png",
+					"pictureFormat": "scaled",
+					"sizingY": "move"
+				},
+				"Static Picture6": {
+					"type": "picture",
+					"top": 233,
+					"left": 511,
+					"width": 36,
+					"height": 36,
+					"picture": "/RESOURCES/image/categoryIcon/latitude.png",
+					"pictureFormat": "scaled"
+				},
+				"Static Picture7": {
+					"type": "picture",
+					"top": 273,
+					"left": 511,
+					"width": 36,
+					"height": 36,
+					"picture": "/RESOURCES/image/categoryIcon/Longitude.png",
+					"pictureFormat": "scaled"
+				},
+				"Input8": {
+					"type": "input",
+					"left": 570,
+					"top": 244,
+					"width": 120,
+					"height": 17,
+					"dataSource": "Form:C1466.Airport.latitude",
+					"class": "",
+					"enterable": false,
+					"focusable": false,
+					"contextMenu": "none",
+					"fill": "transparent",
+					"borderStyle": "none",
+					"stroke": "automatic",
+					"textAlign": "left"
+				},
+				"Input9": {
+					"type": "input",
+					"left": 570,
+					"top": 284,
+					"width": 120,
+					"height": 17,
+					"dataSource": "Form:C1466.Airport.longitude",
+					"class": "",
+					"enterable": false,
+					"focusable": false,
+					"contextMenu": "none",
+					"fill": "transparent",
+					"borderStyle": "none",
+					"stroke": "automatic",
+					"textAlign": "left"
+				},
+				"Text5": {
+					"type": "text",
+					"text": "Elevation",
+					"top": 236,
+					"left": 76,
+					"width": 83,
+					"height": 16,
+					"class": "label"
+				},
+				"Input10": {
+					"type": "input",
+					"left": 76,
+					"top": 256,
+					"width": 56,
+					"height": 17,
+					"dataSource": "Form:C1466.Airport.geometry.elevation",
+					"class": "",
+					"fill": "transparent",
+					"borderStyle": "none",
+					"enterable": false,
+					"focusable": false,
+					"contextMenu": "none"
+				},
+				"btnIntl": {
+					"type": "pictureButton",
+					"left": 570,
+					"top": 51,
+					"width": 32,
+					"height": 32,
+					"events": [
+						"onClick"
+					],
+					"picture": "/RESOURCES/image/button/off-button.png"
+				},
+				"btnDomestic": {
+					"type": "pictureButton",
+					"left": 570,
+					"top": 97,
+					"width": 32,
+					"height": 32,
+					"events": [
+						"onClick"
+					],
+					"picture": "/RESOURCES/image/button/off-button.png"
+				},
+				"btnIntlHub": {
+					"type": "pictureButton",
+					"left": 722,
+					"top": 51,
+					"width": 32,
+					"height": 32,
+					"events": [
+						"onClick"
+					],
+					"picture": "/RESOURCES/image/button/off-button.png"
+				}
+			}
+		}
+	],
+	"geometryStamp": 1765,
+	"method": "method.4dm",
+	"editor": {
+		"activeView": "View 1",
+		"defaultView": "View 1",
+		"views": {
+			"View 1": {}
+		}
+	}
+}

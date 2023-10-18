@@ -1,0 +1,736 @@
+{
+	"$4d": {
+		"version": "1",
+		"kind": "form"
+	},
+	"windowSizingX": "variable",
+	"windowSizingY": "variable",
+	"windowMinWidth": 0,
+	"windowMinHeight": 0,
+	"windowMaxWidth": 32767,
+	"windowMaxHeight": 32767,
+	"rightMargin": 0,
+	"bottomMargin": 0,
+	"events": [
+		"onLoad",
+		"onPageChange",
+		"onValidate",
+		"onClick",
+		"onDoubleClick",
+		"onOutsideCall",
+		"onBeginDragOver",
+		"onDragOver",
+		"onDrop",
+		"onAfterKeystroke",
+		"onMenuSelect",
+		"onPluginArea",
+		"onAfterEdit",
+		"onTimer",
+		"onBoundVariableChange"
+	],
+	"windowTitle": "window title",
+	"destination": "detailScreen",
+	"pages": [
+		{
+			"objects": {
+				"bkgd": {
+					"type": "rectangle",
+					"top": 0,
+					"left": 0,
+					"width": 1015,
+					"height": 733,
+					"stroke": "transparent",
+					"fill": "#191970"
+				}
+			}
+		},
+		{
+			"objects": {
+				"Rectangle": {
+					"type": "rectangle",
+					"top": 137,
+					"left": -1,
+					"width": 458,
+					"height": 34,
+					"stroke": "transparent",
+					"fill": "#337DB6"
+				},
+				"Text": {
+					"type": "text",
+					"text": "Airports",
+					"top": 146,
+					"left": 97,
+					"width": 191,
+					"height": 16,
+					"stroke": "#FFFFFF",
+					"fontWeight": "bold"
+				},
+				"Rectangle1": {
+					"type": "rectangle",
+					"top": 0,
+					"left": 0,
+					"width": 60,
+					"height": 137,
+					"stroke": "#FFFFFF",
+					"fill": "#c0c0c0"
+				},
+				"Rectangle2": {
+					"type": "rectangle",
+					"top": 0,
+					"left": 59,
+					"width": 398,
+					"height": 137,
+					"stroke": "#FFFFFF",
+					"fill": "#DFDFDF"
+				},
+				"Text1": {
+					"type": "text",
+					"text": "Airline name",
+					"top": 5,
+					"left": 64,
+					"width": 107,
+					"height": 16,
+					"stroke": "#808080",
+					"fontSize": 12
+				},
+				"Input": {
+					"type": "input",
+					"left": 64,
+					"top": 25,
+					"width": 377,
+					"height": 17,
+					"dataSource": "Form:C1466.Airline.name",
+					"enterable": false,
+					"focusable": false,
+					"fill": "transparent",
+					"borderStyle": "none",
+					"fontSize": 13
+				},
+				"Text2": {
+					"type": "text",
+					"text": "Designator",
+					"top": 53,
+					"left": 64,
+					"width": 107,
+					"height": 16,
+					"stroke": "#808080",
+					"fontSize": 12
+				},
+				"Input1": {
+					"type": "input",
+					"left": 64,
+					"top": 73,
+					"width": 57,
+					"height": 17,
+					"dataSource": "Form:C1466.Airline.designator",
+					"enterable": false,
+					"focusable": false,
+					"fill": "transparent",
+					"borderStyle": "none",
+					"fontSize": 13
+				},
+				"Input2": {
+					"type": "input",
+					"left": 141,
+					"top": 73,
+					"width": 57,
+					"height": 17,
+					"dataSource": "Form:C1466.Airline.ICAOdesignator",
+					"enterable": false,
+					"focusable": false,
+					"fill": "transparent",
+					"borderStyle": "none",
+					"fontSize": 13
+				},
+				"Text3": {
+					"type": "text",
+					"text": "Country",
+					"top": 53,
+					"left": 271,
+					"width": 107,
+					"height": 16,
+					"stroke": "#808080",
+					"fontSize": 12
+				},
+				"Input3": {
+					"type": "input",
+					"left": 271,
+					"top": 73,
+					"width": 22,
+					"height": 16,
+					"dataSource": "Form:C1466.Airline.country.tinyFlag",
+					"enterable": false,
+					"focusable": false,
+					"fill": "transparent",
+					"borderStyle": "none",
+					"dataSourceTypeHint": "picture",
+					"pictureFormat": "truncatedCenter"
+				},
+				"Input4": {
+					"type": "input",
+					"left": 298,
+					"top": 73,
+					"width": 57,
+					"height": 17,
+					"dataSource": "Form:C1466.Airline.country.isoCode_2",
+					"enterable": false,
+					"focusable": false,
+					"fill": "transparent",
+					"borderStyle": "none",
+					"fontSize": 13
+				},
+				"Static Picture1": {
+					"type": "picture",
+					"top": 5,
+					"left": 11,
+					"width": 36,
+					"height": 36,
+					"picture": "/RESOURCES/image/categoryIcon/passport.png",
+					"pictureFormat": "scaled"
+				},
+				"Static Picture2": {
+					"type": "picture",
+					"top": 142,
+					"left": 64,
+					"width": 24,
+					"height": 24,
+					"picture": "/RESOURCES/image/categoryIcon/airportTower.png",
+					"pictureFormat": "scaled"
+				},
+				"Rectangle3": {
+					"type": "rectangle",
+					"top": 171,
+					"left": 0,
+					"width": 60,
+					"height": 161,
+					"stroke": "#FFFFFF",
+					"fill": "#c0c0c0"
+				},
+				"Static Picture3": {
+					"type": "picture",
+					"top": 178,
+					"left": 12,
+					"width": 36,
+					"height": 36,
+					"picture": "/RESOURCES/image/categoryIcon/takeoff.png",
+					"pictureFormat": "scaled"
+				},
+				"Rectangle4": {
+					"type": "rectangle",
+					"top": 331,
+					"left": 0,
+					"width": 60,
+					"height": 161,
+					"stroke": "#FFFFFF",
+					"fill": "#c0c0c0"
+				},
+				"Static Picture4": {
+					"type": "picture",
+					"top": 338,
+					"left": 12,
+					"width": 36,
+					"height": 36,
+					"picture": "/RESOURCES/image/categoryIcon/landing.png",
+					"pictureFormat": "scaled"
+				},
+				"List Box": {
+					"type": "listbox",
+					"left": 60,
+					"top": 171,
+					"width": 396,
+					"height": 161,
+					"events": [
+						"onClick",
+						"onHeaderClick",
+						"onDataChange",
+						"onSelectionChange"
+					],
+					"showHeaders": false,
+					"horizontalLineStroke": "transparent",
+					"verticalLineStroke": "transparent",
+					"borderStyle": "none",
+					"scrollbarHorizontal": "hidden",
+					"listboxType": "collection",
+					"fill": "#DFDFDF",
+					"alternateFill": "#E8E8E8",
+					"dataSource": "Form:C1466.Airline.slots.fromAirport",
+					"columns": [
+						{
+							"header": {
+								"text": "Header1",
+								"name": "Header1"
+							},
+							"name": "Column1",
+							"footer": {
+								"name": "Footer1"
+							},
+							"dataSource": "This:C1470.IATA_airportCode",
+							"width": 50,
+							"enterable": false
+						},
+						{
+							"header": {
+								"name": "Header2",
+								"text": "Header2"
+							},
+							"name": "Column2",
+							"footer": {
+								"name": "Footer2"
+							},
+							"dataSource": "This:C1470.city",
+							"enterable": false
+						},
+						{
+							"header": {
+								"name": "Header4",
+								"text": "Header3"
+							},
+							"name": "Column4",
+							"footer": {
+								"name": "Footer4"
+							},
+							"dataSource": "This:C1470.location",
+							"width": 128,
+							"enterable": false
+						},
+						{
+							"header": {
+								"name": "Header3",
+								"text": "Header3"
+							},
+							"name": "Column3",
+							"footer": {
+								"name": "Footer3"
+							},
+							"dataSource": "This:C1470.country.tinyFlag",
+							"width": 30,
+							"dataSourceTypeHint": "picture"
+						}
+					]
+				},
+				"List Box1": {
+					"type": "listbox",
+					"left": 60,
+					"top": 331,
+					"width": 396,
+					"height": 161,
+					"events": [
+						"onClick",
+						"onHeaderClick",
+						"onDataChange",
+						"onSelectionChange"
+					],
+					"showHeaders": false,
+					"horizontalLineStroke": "transparent",
+					"verticalLineStroke": "transparent",
+					"borderStyle": "none",
+					"scrollbarHorizontal": "hidden",
+					"listboxType": "collection",
+					"fill": "#DFDFDF",
+					"alternateFill": "#E8E8E8",
+					"dataSource": "Form:C1466.Airline.slots.toAirport",
+					"columns": [
+						{
+							"header": {
+								"text": "Header1",
+								"name": "Header5"
+							},
+							"name": "Column5",
+							"footer": {
+								"name": "Footer5"
+							},
+							"dataSource": "This:C1470.IATA_airportCode",
+							"width": 50,
+							"enterable": false
+						},
+						{
+							"header": {
+								"name": "Header6",
+								"text": "Header2"
+							},
+							"name": "Column6",
+							"footer": {
+								"name": "Footer6"
+							},
+							"dataSource": "This:C1470.city",
+							"enterable": false
+						},
+						{
+							"header": {
+								"name": "Header7",
+								"text": "Header3"
+							},
+							"name": "Column7",
+							"footer": {
+								"name": "Footer7"
+							},
+							"dataSource": "This:C1470.location",
+							"width": 128,
+							"enterable": false
+						},
+						{
+							"header": {
+								"name": "Header8",
+								"text": "Header3"
+							},
+							"name": "Column8",
+							"footer": {
+								"name": "Footer8"
+							},
+							"dataSource": "This:C1470.country.tinyFlag",
+							"width": 30,
+							"dataSourceTypeHint": "picture",
+							"enterable": false
+						}
+					]
+				},
+				"Rectangle5": {
+					"type": "rectangle",
+					"top": 492,
+					"left": 0,
+					"width": 456,
+					"height": 34,
+					"stroke": "transparent",
+					"fill": "#337DB6"
+				},
+				"Text4": {
+					"type": "text",
+					"text": "Countries",
+					"top": 501,
+					"left": 98,
+					"width": 191,
+					"height": 16,
+					"stroke": "#FFFFFF",
+					"fontWeight": "bold"
+				},
+				"Static Picture5": {
+					"type": "picture",
+					"top": 497,
+					"left": 65,
+					"width": 24,
+					"height": 24,
+					"picture": "/RESOURCES/image/categoryIcon/worldmap.png",
+					"pictureFormat": "scaled"
+				},
+				"Rectangle6": {
+					"type": "rectangle",
+					"top": 526,
+					"left": 0,
+					"width": 60,
+					"height": 208,
+					"stroke": "#FFFFFF",
+					"fill": "#c0c0c0",
+					"sizingY": "grow"
+				},
+				"Static Picture6": {
+					"type": "picture",
+					"top": 533,
+					"left": 12,
+					"width": 36,
+					"height": 38,
+					"picture": "/RESOURCES/image/categoryIcon/country.png",
+					"pictureFormat": "scaled"
+				},
+				"List Box2": {
+					"type": "listbox",
+					"left": 60,
+					"top": 526,
+					"width": 396,
+					"height": 208,
+					"events": [
+						"onClick",
+						"onHeaderClick",
+						"onDataChange",
+						"onSelectionChange"
+					],
+					"showHeaders": false,
+					"horizontalLineStroke": "transparent",
+					"verticalLineStroke": "transparent",
+					"borderStyle": "none",
+					"scrollbarHorizontal": "hidden",
+					"listboxType": "collection",
+					"fill": "#DFDFDF",
+					"alternateFill": "#E8E8E8",
+					"dataSource": "Form:C1466.Airline.slots.fromAirport.country",
+					"sizingY": "grow",
+					"columns": [
+						{
+							"header": {
+								"text": "Header1",
+								"name": "Header9"
+							},
+							"name": "Column9",
+							"footer": {
+								"name": "Footer9"
+							},
+							"dataSource": "This:C1470.codes.IATA",
+							"width": 50,
+							"dataSourceTypeHint": "picture",
+							"enterable": false
+						},
+						{
+							"header": {
+								"name": "Header10",
+								"text": "Header2"
+							},
+							"name": "Column10",
+							"footer": {
+								"name": "Footer10"
+							},
+							"dataSource": "This:C1470.name",
+							"width": 128,
+							"enterable": false
+						},
+						{
+							"header": {
+								"name": "Header11",
+								"text": "Header3"
+							},
+							"name": "Column11",
+							"footer": {
+								"name": "Footer11"
+							},
+							"dataSource": "This:C1470.continent",
+							"width": 128,
+							"enterable": false
+						},
+						{
+							"header": {
+								"name": "Header12",
+								"text": "Header3"
+							},
+							"name": "Column12",
+							"footer": {
+								"name": "Footer12"
+							},
+							"dataSource": "This:C1470.tinyFlag",
+							"width": 30,
+							"dataSourceTypeHint": "picture"
+						}
+					]
+				},
+				"Rectangle7": {
+					"type": "rectangle",
+					"top": 0,
+					"left": 456,
+					"width": 60,
+					"height": 137,
+					"stroke": "#FFFFFF",
+					"fill": "#c0c0c0"
+				},
+				"Rectangle8": {
+					"type": "rectangle",
+					"top": 0,
+					"left": 515,
+					"width": 500,
+					"height": 137,
+					"stroke": "#FFFFFF",
+					"fill": "#DFDFDF"
+				},
+				"Static Picture7": {
+					"type": "picture",
+					"top": 6,
+					"left": 469,
+					"width": 36,
+					"height": 36,
+					"picture": "/RESOURCES/image/categoryIcon/twocards.png",
+					"pictureFormat": "scaled"
+				},
+				"Input5": {
+					"type": "input",
+					"left": 525,
+					"top": 6,
+					"width": 479,
+					"height": 123,
+					"dataSource": "Form:C1466.Airline.logo",
+					"enterable": false,
+					"focusable": false,
+					"fill": "transparent",
+					"borderStyle": "none",
+					"dataSourceTypeHint": "picture",
+					"pictureFormat": "truncatedCenter"
+				},
+				"Rectangle9": {
+					"type": "rectangle",
+					"top": 137,
+					"left": 456,
+					"width": 560,
+					"height": 34,
+					"stroke": "transparent",
+					"fill": "#337DB6"
+				},
+				"Text5": {
+					"type": "text",
+					"text": "Informations",
+					"top": 146,
+					"left": 554,
+					"width": 191,
+					"height": 16,
+					"stroke": "#FFFFFF",
+					"fontWeight": "bold"
+				},
+				"Static Picture8": {
+					"type": "picture",
+					"top": 142,
+					"left": 521,
+					"width": 24,
+					"height": 24,
+					"picture": "/RESOURCES/image/categoryIcon/information.png",
+					"pictureFormat": "scaled"
+				},
+				"Rectangle10": {
+					"type": "rectangle",
+					"top": 171,
+					"left": 456,
+					"width": 60,
+					"height": 231,
+					"stroke": "#FFFFFF",
+					"fill": "#c0c0c0"
+				},
+				"Rectangle11": {
+					"type": "rectangle",
+					"top": 171,
+					"left": 515,
+					"width": 500,
+					"height": 231,
+					"stroke": "#FFFFFF",
+					"fill": "#DFDFDF"
+				},
+				"Static Picture9": {
+					"type": "picture",
+					"top": 177,
+					"left": 469,
+					"width": 36,
+					"height": 36,
+					"picture": "/RESOURCES/image/categoryIcon/bulletext.png",
+					"pictureFormat": "scaled"
+				},
+				"Input6": {
+					"type": "input",
+					"left": 525,
+					"top": 177,
+					"width": 472,
+					"height": 129,
+					"dataSource": "Form:C1466.Airline.description",
+					"enterable": false,
+					"focusable": false,
+					"fill": "transparent",
+					"borderStyle": "none",
+					"dataSourceTypeHint": "text",
+					"scrollbarVertical": "automatic"
+				},
+				"Text6": {
+					"type": "text",
+					"text": "Web site",
+					"top": 311,
+					"left": 525,
+					"width": 107,
+					"height": 16,
+					"stroke": "#808080",
+					"fontSize": 12
+				},
+				"Input7": {
+					"type": "input",
+					"left": 525,
+					"top": 331,
+					"width": 377,
+					"height": 17,
+					"dataSource": "Form:C1466.Airline.website",
+					"enterable": false,
+					"focusable": false,
+					"fill": "transparent",
+					"borderStyle": "none",
+					"fontSize": 13
+				},
+				"Text7": {
+					"type": "text",
+					"text": "Wikipedia",
+					"top": 356,
+					"left": 525,
+					"width": 107,
+					"height": 16,
+					"stroke": "#808080",
+					"fontSize": 12
+				},
+				"Input8": {
+					"type": "input",
+					"left": 525,
+					"top": 376,
+					"width": 377,
+					"height": 17,
+					"dataSource": "Form:C1466.Airline.url_wiki",
+					"enterable": false,
+					"focusable": false,
+					"fill": "transparent",
+					"borderStyle": "none",
+					"fontSize": 13
+				},
+				"Rectangle12": {
+					"type": "rectangle",
+					"top": 401,
+					"left": 456,
+					"width": 60,
+					"height": 91,
+					"stroke": "#FFFFFF",
+					"fill": "#c0c0c0"
+				},
+				"Rectangle13": {
+					"type": "rectangle",
+					"top": 401,
+					"left": 515,
+					"width": 500,
+					"height": 91,
+					"stroke": "#FFFFFF",
+					"fill": "#DFDFDF"
+				},
+				"Static Picture10": {
+					"type": "picture",
+					"top": 407,
+					"left": 469,
+					"width": 36,
+					"height": 36,
+					"picture": "/RESOURCES/image/categoryIcon/bulletext.png",
+					"pictureFormat": "scaled"
+				},
+				"Rectangle14": {
+					"type": "rectangle",
+					"top": 492,
+					"left": 456,
+					"width": 560,
+					"height": 34,
+					"stroke": "transparent",
+					"fill": "#337DB6"
+				},
+				"Text8": {
+					"type": "text",
+					"text": "Aircrafts",
+					"top": 501,
+					"left": 554,
+					"width": 191,
+					"height": 16,
+					"stroke": "#FFFFFF",
+					"fontWeight": "bold"
+				},
+				"Static Picture11": {
+					"type": "picture",
+					"top": 497,
+					"left": 521,
+					"width": 24,
+					"height": 24,
+					"picture": "/RESOURCES/image/categoryIcon/plane.png",
+					"pictureFormat": "scaled"
+				}
+			}
+		}
+	],
+	"geometryStamp": 429,
+	"editor": {
+		"activeView": "View 1",
+		"defaultView": "View 1",
+		"views": {
+			"View 1": {}
+		}
+	},
+	"formSizeAnchor": "bkgd",
+	"method": "method.4dm"
+}

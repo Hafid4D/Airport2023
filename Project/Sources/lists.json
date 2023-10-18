@@ -1,0 +1,67 @@
+{
+	"camaieu": {
+		"editable": false,
+		"items": [
+			{
+				"text": "darkred",
+				"ref": 1,
+				"editable": true
+			},
+			{
+				"text": "red",
+				"ref": 2,
+				"editable": true
+			},
+			{
+				"text": "orangered",
+				"ref": 3,
+				"editable": true
+			},
+			{
+				"text": "darkgreen",
+				"ref": 4,
+				"editable": true
+			},
+			{
+				"text": "green",
+				"ref": 5,
+				"editable": true
+			},
+			{
+				"text": "olive",
+				"ref": 6,
+				"editable": true
+			},
+			{
+				"text": "darkorange",
+				"ref": 7,
+				"editable": true
+			},
+			{
+				"text": "orange",
+				"ref": 8,
+				"editable": true
+			},
+			{
+				"text": "gold",
+				"ref": 9,
+				"editable": true
+			},
+			{
+				"text": "yellow",
+				"ref": 10,
+				"editable": true
+			},
+			{
+				"text": "saddiebrown",
+				"ref": 11,
+				"editable": true
+			},
+			{
+				"text": "chocolate",
+				"ref": 12,
+				"editable": true
+			}
+		]
+	}
+}

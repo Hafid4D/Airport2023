@@ -1,0 +1,439 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE base SYSTEM "http://www.4d.com/dtd/2007/base.dtd" >
+<base name="Airport2023" uuid="BB6639C16CA5467B9C32AB45D16B66F2" collation_locale="en">
+	<schema name="DEFAULT_SCHEMA"/>
+	<table name="Slot" uuid="FD981BC58D5B4E4E856352060047BCAD" id="1" prevent_journaling="true">
+		<field name="UUID" uuid="9D1B94B4C91C4793904D9176ECDF18CC" type="10" unique="true" autogenerate="true" store_as_UUID="true" id="1"/>
+		<field name="UUID_Aircraft" uuid="DE7B34796425464D881B1D8B89260B5C" type="10" store_as_UUID="true" id="2"/>
+		<field name="UUID_Airline" uuid="156AA3EDAB9E4B179752538EF82F6325" type="10" store_as_UUID="true" id="3"/>
+		<field name="UUID_Line" uuid="93A80750A51C4E96A913462810D47454" type="10" store_as_UUID="true" id="4"/>
+		<field name="flightNumber" uuid="54FC9415D932429BB6DB8EAD7E33FB47" type="10" id="5"/>
+		<field name="daysOfWeek" uuid="39A62770332140DBA76932866C6A3B3F" type="21" id="9">
+			<field_extra>
+				<editor_field_info>
+					<color red="255" green="255" blue="255" alpha="0"/>
+				</editor_field_info>
+			</field_extra>
+		</field>
+		<field name="takeOffStmp" uuid="1CAB7762FF59E94DAF69D29F7F61104A" type="4" id="10"/>
+		<field name="landingStmp" uuid="EA8EA6DA3318D5429440ED7F5D8510E1" type="4" id="11"/>
+		<field name="flightDurationStmp" uuid="818406E46C709B46A4035AEEE63AAE03" type="4" id="12"/>
+		<primary_key field_name="UUID" field_uuid="9D1B94B4C91C4793904D9176ECDF18CC"/>
+		<table_extra input_form="Input" output_form="Output">
+			<editor_table_info displayable_fields_count="12">
+				<color red="249" green="130" blue="127" alpha="255"/>
+				<coordinates left="722.99005126954" top="20.872528076172" width="211.36161804199" height="310.55722045898"/>
+			</editor_table_info>
+		</table_extra>
+	</table>
+	<table name="Airline" uuid="591CC7CD2CC449B2ABD822FF264578DD" id="3" prevent_journaling="true">
+		<field name="UUID" uuid="FDDB630342EB40D6BC26DF91C9D90791" type="10" unique="true" autogenerate="true" store_as_UUID="true" id="1">
+			<field_extra position="1"/>
+		</field>
+		<field name="name" uuid="CE669B02C21E4261AFDB83497BE2BC61" type="10" limiting_length="255" id="2">
+			<field_extra position="3"/>
+		</field>
+		<field name="category" uuid="ED73C30B3C8244018F6076D12CB0E082" type="10" limiting_length="255" id="3">
+			<field_extra position="4"/>
+		</field>
+		<field name="designator" uuid="7598C08A620848A69165436DDFA8B279" type="10" limiting_length="255" id="4">
+			<field_extra position="5"/>
+		</field>
+		<field name="active" uuid="47413AFDFAA04F4BB9A5D043E41D9F15" type="1" id="5">
+			<field_extra position="6"/>
+		</field>
+		<field name="ICAOdesignator" uuid="3843C2567DE3416697EB48FCF862F3A9" type="10" limiting_length="255" id="6">
+			<field_extra position="7"/>
+		</field>
+		<field name="website" uuid="F6D1EDDF342A413BA9EE02D22617E685" type="10" id="7">
+			<field_extra position="8"/>
+		</field>
+		<field name="UUID_Country" uuid="9AFE0725BE4148E3BB5F30BB4F0F27EF" type="10" store_as_UUID="true" id="8">
+			<field_extra position="2"/>
+		</field>
+		<field name="description" uuid="D5E4045B27CD4A67BD480DBA283AE918" type="10" id="10">
+			<field_extra position="9"/>
+		</field>
+		<field name="url_wiki" uuid="D2C6542759954636AAA098C4C5F5F3DD" type="10" id="11">
+			<field_extra position="10"/>
+		</field>
+		<field name="logo" uuid="3957F0DEE4BB41118330BD0E1AD638DC" type="12" id="12">
+			<field_extra position="11"/>
+		</field>
+		<field name="tinyLogo" uuid="4080D09B288A4246ADFCF09A091E3086" type="12" id="13">
+			<field_extra position="12"/>
+		</field>
+		<primary_key field_name="UUID" field_uuid="FDDB630342EB40D6BC26DF91C9D90791"/>
+		<table_extra output_form="Output" input_form="Input">
+			<editor_table_info fields_ordering="2" displayable_fields_count="13">
+				<color red="181" green="145" blue="209" alpha="255"/>
+				<coordinates left="302.88568115234" top="500.19677734375" width="225.42813110352" height="320.7287902832"/>
+			</editor_table_info>
+		</table_extra>
+	</table>
+	<table name="Country" uuid="941D3C824FA14B388A33E07AF731EFDC" id="4" prevent_journaling="true">
+		<field name="UUID" uuid="94D9C89F0E1A4E3582505FBD3FA14757" type="10" unique="true" autogenerate="true" store_as_UUID="true" id="1">
+			<field_extra position="1"/>
+		</field>
+		<field name="name" uuid="6696BA3CDE8641DB8D8C6657A8A06E07" type="10" id="2">
+			<field_extra position="2"/>
+		</field>
+		<field name="continent" uuid="02DC26B12DAA4629AB52C71CC9B021E2" type="10" id="3">
+			<field_extra position="3"/>
+		</field>
+		<field name="localTime" uuid="4A200F0E91B24C3292160D458D0FCFE0" type="6" id="7">
+			<field_extra position="4"/>
+		</field>
+		<field name="summerTime" uuid="483942A51C304463AA4835C2AA85602D" type="6" id="8">
+			<field_extra position="5"/>
+		</field>
+		<field name="tinyFlag" uuid="470E84A71F2D4614A536A5D0168E2C9F" type="12" id="9">
+			<field_extra position="6"/>
+		</field>
+		<field name="codes" uuid="192B6E2206984EB7AF2D7A60CEBB7BC8" type="21" blob_switch_size="2147483647" id="10">
+			<field_extra position="7"/>
+		</field>
+		<primary_key field_name="UUID" field_uuid="94D9C89F0E1A4E3582505FBD3FA14757"/>
+		<table_extra input_form="Input" output_form="Output">
+			<editor_table_info fields_ordering="2" displayable_fields_count="11">
+				<color red="114" green="209" blue="221" alpha="255"/>
+				<coordinates left="1033.6618652344" top="521.03381347656" width="169.48394775391" height="287.15447998047"/>
+			</editor_table_info>
+		</table_extra>
+	</table>
+	<table name="Line" uuid="9591B2513FBA4A0A9DD9A3574229F1FC" id="5" prevent_journaling="true">
+		<field name="UUID" uuid="38A28D6C5FC744C7B203BCCCA2704C25" type="10" unique="true" autogenerate="true" store_as_UUID="true" id="1"/>
+		<field name="UUID_Airport_From" uuid="AF89646019004E58BCDF82E0FE290161" type="10" store_as_UUID="true" id="2"/>
+		<field name="UUID_Airport_To" uuid="FAABC669DD47461EADD1B422A2626DAD" type="10" store_as_UUID="true" id="3"/>
+		<field name="distance" uuid="84FBD66F6E4C4EF8B9C5EFAE29CB6554" type="4" id="4"/>
+		<primary_key field_name="UUID" field_uuid="38A28D6C5FC744C7B203BCCCA2704C25"/>
+		<table_extra input_form="Input" output_form="Output">
+			<editor_table_info fields_ordering="1" displayable_fields_count="7">
+				<color red="181" green="223" blue="149" alpha="255"/>
+				<coordinates left="969.75280761719" top="115.6083984375" width="236.57556152344" height="191.89126586914"/>
+			</editor_table_info>
+		</table_extra>
+	</table>
+	<table name="Airport" uuid="A156EA4E153B45D493642E1135A53152" id="6" prevent_journaling="true">
+		<field name="UUID" uuid="16E977805C814530927FC70BC4109D73" type="10" unique="true" autogenerate="true" store_as_UUID="true" id="1">
+			<field_extra position="1"/>
+		</field>
+		<field name="city" uuid="83456362D09D4E7D854C732E211FBFEA" type="10" limiting_length="255" id="2">
+			<field_extra position="3"/>
+		</field>
+		<field name="location" uuid="44E83EE8D7E2458587A8C186A896CDBF" type="10" limiting_length="255" id="3">
+			<field_extra position="4"/>
+		</field>
+		<field name="stateProvince" uuid="0E32190FBC114B6E814EDE56BF49C2A2" type="10" limiting_length="255" id="5">
+			<field_extra position="5"/>
+		</field>
+		<field name="level" uuid="42A79172B497494A96094B2C44E4EC43" type="4" id="6">
+			<field_extra position="6">
+				<editor_field_info>
+					<color red="255" green="255" blue="255" alpha="0"/>
+				</editor_field_info>
+			</field_extra>
+		</field>
+		<field name="international" uuid="3939164D3B1F4E1695ABF3E12F47822C" type="1" id="14">
+			<field_extra position="7"/>
+		</field>
+		<field name="domestic" uuid="2874340DE6ED4014856BCB60C04F4B78" type="1" id="15">
+			<field_extra position="8"/>
+		</field>
+		<field name="UUID_Country" uuid="EB7A466C6B53428A998D868E95EE4F51" type="10" store_as_UUID="true" id="16">
+			<field_extra position="2"/>
+		</field>
+		<field name="groupOfAirport" uuid="3A63CACD833A4AE398C9EFD8C5C5A242" type="4" id="17">
+			<field_extra position="10"/>
+		</field>
+		<field name="localTime" uuid="23326838E5C34A9297B159A599DCB2EA" type="6" id="18">
+			<field_extra position="11"/>
+		</field>
+		<field name="summerTime" uuid="F6C414E91240486686B7D7E6E2EB9F08" type="6" id="19">
+			<field_extra position="12"/>
+		</field>
+		<field name="intlHub" uuid="A0531D060CE9497FBD376070524C8E74" type="1" id="20">
+			<field_extra position="9"/>
+		</field>
+		<field name="codes" uuid="3C7D69180EC2455A9674A7E2B4AB6CBF" type="21" blob_switch_size="2147483647" id="21">
+			<field_extra position="13"/>
+		</field>
+		<field name="geometry" uuid="E2C285D8A72248D0981937C1DDA479E6" type="21" blob_switch_size="2147483647" id="22">
+			<field_extra position="14"/>
+		</field>
+		<primary_key field_name="UUID" field_uuid="16E977805C814530927FC70BC4109D73"/>
+		<table_extra input_form="Input" output_form="Output">
+			<editor_table_info fields_ordering="2" displayable_fields_count="25">
+				<color red="255" green="153" blue="63" alpha="255"/>
+				<coordinates left="1551.1452636718" top="305.96820068359" width="258.48889160156" height="571.55847167969"/>
+			</editor_table_info>
+		</table_extra>
+	</table>
+	<table name="Flight" uuid="2A6BDA6EE463954AB582664E0A10D76E" id="8">
+		<field name="UUID" uuid="19CCEDADFA8EFD4D9D2AE597582808B6" type="10" unique="true" autogenerate="true" store_as_UUID="true" not_null="true" id="1"/>
+		<field name="UUID_Slot" uuid="6197F3D12DD787458759F4ABDC677FA0" type="10" autogenerate="true" store_as_UUID="true" id="2"/>
+		<field name="date" uuid="AA6F537BA7E08D4D86BBBD5BEB636D0D" type="8" id="3"/>
+		<field name="canceled" uuid="53E6E06AD6DABB4CB723256717560E74" type="1" id="6"/>
+		<field name="realDepartureStmp" uuid="F47F24639347914E846912A35DD0671D" type="4" id="7"/>
+		<field name="realArrivalStmp" uuid="7A620686F58C9F4AADE19995231BD584" type="4" id="8"/>
+		<primary_key field_name="UUID" field_uuid="19CCEDADFA8EFD4D9D2AE597582808B6"/>
+		<table_extra input_form="Input" output_form="Output">
+			<editor_table_info displayable_fields_count="10">
+				<color red="249" green="130" blue="127" alpha="255"/>
+				<coordinates left="69.006622314451" top="0" width="288.37835693359" height="262.75982666015"/>
+			</editor_table_info>
+		</table_extra>
+	</table>
+	<table name="Aircraft" uuid="F42B9416537FB848BB70A776686584BE" id="9" prevent_journaling="true">
+		<field name="name" uuid="81EFE5F51AF293488A7A6C263A2516C1" type="10" id="1">
+			<field_extra position="2"/>
+		</field>
+		<field name="IATA" uuid="8CC7A2DFBEC10C4598B67FBBC5282794" type="10" id="2">
+			<field_extra position="3"/>
+		</field>
+		<field name="ICAO" uuid="AB62E7B0A4672E488578670A2A28E84A" type="10" id="3">
+			<field_extra position="4"/>
+		</field>
+		<field name="UUID" uuid="A19F3DF03A1A0B4A9C57C3EC8968259E" type="10" unique="true" autogenerate="true" store_as_UUID="true" id="4">
+			<field_extra position="1"/>
+		</field>
+		<field name="engineType" uuid="E5F72B591FC885449E488E550E98C774" type="10" limiting_length="255" id="5"/>
+		<field name="engineCount" uuid="799489E33D47034889CB2B3C46C9B146" type="6" id="6"/>
+		<primary_key field_name="UUID" field_uuid="A19F3DF03A1A0B4A9C57C3EC8968259E"/>
+		<table_extra input_form="Input" output_form="Output">
+			<editor_table_info displayable_fields_count="6">
+				<color red="224" green="234" blue="104" alpha="255"/>
+				<coordinates left="59.660781860352" top="308.36950683594" width="175.06042480469" height="186.96990966797"/>
+			</editor_table_info>
+		</table_extra>
+	</table>
+	<relation uuid="BEC24CE5E70D407B906613A57B041488" name_Nto1="country" name_1toN="airports" auto_load_Nto1="false" auto_load_1toN="false" foreign_key="false" state="1">
+		<related_field kind="source">
+			<field_ref uuid="EB7A466C6B53428A998D868E95EE4F51" name="UUID_Country">
+				<table_ref uuid="A156EA4E153B45D493642E1135A53152" name="Airport"/>
+			</field_ref>
+		</related_field>
+		<related_field kind="destination">
+			<field_ref uuid="94D9C89F0E1A4E3582505FBD3FA14757" name="UUID">
+				<table_ref uuid="941D3C824FA14B388A33E07AF731EFDC" name="Country"/>
+			</field_ref>
+		</related_field>
+		<relation_extra entry_wildchar="false" entry_create="false" choice_field="0" entry_autofill="false">
+			<editor_relation_info via_point_x="-1" via_point_y="-1" prefers_left="true" smartlink="true">
+				<color red="255" green="255" blue="255" alpha="0"/>
+			</editor_relation_info>
+		</relation_extra>
+	</relation>
+	<relation uuid="EA70C712A9F9D7499F49EAAA9A4BE9D8" name_Nto1="aircraft" name_1toN="slots" auto_load_Nto1="false" auto_load_1toN="false" foreign_key="false" state="1">
+		<related_field kind="source">
+			<field_ref uuid="DE7B34796425464D881B1D8B89260B5C" name="UUID_Aircraft">
+				<table_ref uuid="FD981BC58D5B4E4E856352060047BCAD" name="Slot"/>
+			</field_ref>
+		</related_field>
+		<related_field kind="destination">
+			<field_ref uuid="A19F3DF03A1A0B4A9C57C3EC8968259E" name="UUID">
+				<table_ref uuid="F42B9416537FB848BB70A776686584BE" name="Aircraft"/>
+			</field_ref>
+		</related_field>
+		<relation_extra entry_wildchar="false" entry_create="false" choice_field="0" entry_autofill="false">
+			<editor_relation_info via_point_x="-1" via_point_y="-1" prefers_left="true" smartlink="true">
+				<color red="240" green="240" blue="240" alpha="0"/>
+			</editor_relation_info>
+		</relation_extra>
+	</relation>
+	<relation uuid="AB37A94538374528A7E8DB66B7A44011" name_Nto1="country" name_1toN="airlines" auto_load_Nto1="false" auto_load_1toN="false" foreign_key="false" state="1">
+		<related_field kind="source">
+			<field_ref uuid="9AFE0725BE4148E3BB5F30BB4F0F27EF" name="UUID_Country">
+				<table_ref uuid="591CC7CD2CC449B2ABD822FF264578DD" name="Airline"/>
+			</field_ref>
+		</related_field>
+		<related_field kind="destination">
+			<field_ref uuid="94D9C89F0E1A4E3582505FBD3FA14757" name="UUID">
+				<table_ref uuid="941D3C824FA14B388A33E07AF731EFDC" name="Country"/>
+			</field_ref>
+		</related_field>
+		<relation_extra entry_wildchar="false" entry_create="false" choice_field="0" entry_autofill="false">
+			<editor_relation_info via_point_x="-1" via_point_y="-1" prefers_left="false" smartlink="true">
+				<color red="255" green="255" blue="255" alpha="0"/>
+			</editor_relation_info>
+		</relation_extra>
+	</relation>
+	<relation uuid="CD7AA136A1AA4C209CCEC9416A779D7D" name_Nto1="airline" name_1toN="slots" auto_load_Nto1="false" auto_load_1toN="false" foreign_key="false" state="1">
+		<related_field kind="source">
+			<field_ref uuid="156AA3EDAB9E4B179752538EF82F6325" name="UUID_Airline">
+				<table_ref uuid="FD981BC58D5B4E4E856352060047BCAD" name="Slot"/>
+			</field_ref>
+		</related_field>
+		<related_field kind="destination">
+			<field_ref uuid="FDDB630342EB40D6BC26DF91C9D90791" name="UUID">
+				<table_ref uuid="591CC7CD2CC449B2ABD822FF264578DD" name="Airline"/>
+			</field_ref>
+		</related_field>
+		<relation_extra entry_wildchar="false" entry_create="false" choice_field="0" entry_autofill="false">
+			<editor_relation_info via_point_x="-1" via_point_y="-1" prefers_left="true" smartlink="true">
+				<color red="255" green="255" blue="255" alpha="0"/>
+			</editor_relation_info>
+		</relation_extra>
+	</relation>
+	<relation uuid="88EC661FB7EE4E5899DE0FA3F9F081E7" name_Nto1="line" name_1toN="slots" auto_load_Nto1="false" auto_load_1toN="false" foreign_key="false" state="1">
+		<related_field kind="source">
+			<field_ref uuid="93A80750A51C4E96A913462810D47454" name="UUID_Line">
+				<table_ref uuid="FD981BC58D5B4E4E856352060047BCAD" name="Slot"/>
+			</field_ref>
+		</related_field>
+		<related_field kind="destination">
+			<field_ref uuid="38A28D6C5FC744C7B203BCCCA2704C25" name="UUID">
+				<table_ref uuid="9591B2513FBA4A0A9DD9A3574229F1FC" name="Line"/>
+			</field_ref>
+		</related_field>
+		<relation_extra entry_wildchar="false" entry_create="false" choice_field="0" entry_autofill="false">
+			<editor_relation_info via_point_x="-1" via_point_y="-1" prefers_left="false" smartlink="true">
+				<color red="255" green="255" blue="255" alpha="0"/>
+			</editor_relation_info>
+		</relation_extra>
+	</relation>
+	<relation uuid="B83F029F234240DE8707175D6D926BA8" name_Nto1="fromAirport" name_1toN="departureLines" auto_load_Nto1="false" auto_load_1toN="false" foreign_key="false" state="1">
+		<related_field kind="source">
+			<field_ref uuid="AF89646019004E58BCDF82E0FE290161" name="UUID_Airport_From">
+				<table_ref uuid="9591B2513FBA4A0A9DD9A3574229F1FC" name="Line"/>
+			</field_ref>
+		</related_field>
+		<related_field kind="destination">
+			<field_ref uuid="16E977805C814530927FC70BC4109D73" name="UUID">
+				<table_ref uuid="A156EA4E153B45D493642E1135A53152" name="Airport"/>
+			</field_ref>
+		</related_field>
+		<relation_extra entry_wildchar="false" entry_create="false" choice_field="0" entry_autofill="false">
+			<editor_relation_info via_point_x="-1" via_point_y="-1" prefers_left="false" smartlink="true">
+				<color red="255" green="255" blue="255" alpha="0"/>
+			</editor_relation_info>
+		</relation_extra>
+	</relation>
+	<relation uuid="366E49411BB04277936A5C00AC4A64D3" name_Nto1="toAirport" name_1toN="arrivalLines" auto_load_Nto1="false" auto_load_1toN="false" foreign_key="false" state="1">
+		<related_field kind="source">
+			<field_ref uuid="FAABC669DD47461EADD1B422A2626DAD" name="UUID_Airport_To">
+				<table_ref uuid="9591B2513FBA4A0A9DD9A3574229F1FC" name="Line"/>
+			</field_ref>
+		</related_field>
+		<related_field kind="destination">
+			<field_ref uuid="16E977805C814530927FC70BC4109D73" name="UUID">
+				<table_ref uuid="A156EA4E153B45D493642E1135A53152" name="Airport"/>
+			</field_ref>
+		</related_field>
+		<relation_extra entry_wildchar="false" entry_create="false" choice_field="0" entry_autofill="false">
+			<editor_relation_info via_point_x="-1" via_point_y="-1" prefers_left="false" smartlink="true">
+				<color red="255" green="255" blue="255" alpha="0"/>
+			</editor_relation_info>
+		</relation_extra>
+	</relation>
+	<relation uuid="3036D679A54BBB4394DDF38F00848DAD" name_Nto1="slot" name_1toN="flights" auto_load_Nto1="false" auto_load_1toN="false" foreign_key="false" state="1">
+		<related_field kind="source">
+			<field_ref uuid="6197F3D12DD787458759F4ABDC677FA0" name="UUID_Slot">
+				<table_ref uuid="2A6BDA6EE463954AB582664E0A10D76E" name="Flight"/>
+			</field_ref>
+		</related_field>
+		<related_field kind="destination">
+			<field_ref uuid="9D1B94B4C91C4793904D9176ECDF18CC" name="UUID">
+				<table_ref uuid="FD981BC58D5B4E4E856352060047BCAD" name="Slot"/>
+			</field_ref>
+		</related_field>
+		<relation_extra entry_wildchar="false" entry_create="false" choice_field="0" entry_autofill="false">
+			<editor_relation_info via_point_x="-1" via_point_y="-1" prefers_left="false" smartlink="true">
+				<color red="240" green="240" blue="240" alpha="0"/>
+			</editor_relation_info>
+		</relation_extra>
+	</relation>
+	<index kind="regular" uuid="033A7B4A4CAE454F845924608D0827DF" type="3">
+		<field_ref uuid="EB7A466C6B53428A998D868E95EE4F51" name="UUID_Country">
+			<table_ref uuid="A156EA4E153B45D493642E1135A53152" name="Airport"/>
+		</field_ref>
+	</index>
+	<index kind="regular" uuid="13586A95ED3A49DA8208A8814AA17FC4" type="3">
+		<field_ref uuid="AF89646019004E58BCDF82E0FE290161" name="UUID_Airport_From">
+			<table_ref uuid="9591B2513FBA4A0A9DD9A3574229F1FC" name="Line"/>
+		</field_ref>
+	</index>
+	<index kind="regular" unique_keys="true" uuid="2D89245034644473BD99AF9EE24F1098" type="1">
+		<field_ref uuid="16E977805C814530927FC70BC4109D73" name="UUID">
+			<table_ref uuid="A156EA4E153B45D493642E1135A53152" name="Airport"/>
+		</field_ref>
+	</index>
+	<index kind="regular" uuid="3CF801FD55E1473EBF2CCB8684663C7A" type="3">
+		<field_ref uuid="9AFE0725BE4148E3BB5F30BB4F0F27EF" name="UUID_Country">
+			<table_ref uuid="591CC7CD2CC449B2ABD822FF264578DD" name="Airline"/>
+		</field_ref>
+	</index>
+	<index kind="regular" uuid="52626132D1D94F8F8E778197DC837499" type="3">
+		<field_ref uuid="156AA3EDAB9E4B179752538EF82F6325" name="UUID_Airline">
+			<table_ref uuid="FD981BC58D5B4E4E856352060047BCAD" name="Slot"/>
+		</field_ref>
+	</index>
+	<index kind="regular" uuid="5C8C904D946F490892FE9FD4177B5D29" type="3">
+		<field_ref uuid="DE7B34796425464D881B1D8B89260B5C" name="UUID_Aircraft">
+			<table_ref uuid="FD981BC58D5B4E4E856352060047BCAD" name="Slot"/>
+		</field_ref>
+	</index>
+	<index kind="regular" unique_keys="true" uuid="5CDBB615AA2D004CABEA504117D6BCB8" type="1">
+		<field_ref uuid="19CCEDADFA8EFD4D9D2AE597582808B6" name="UUID">
+			<table_ref uuid="2A6BDA6EE463954AB582664E0A10D76E" name="Flight"/>
+		</field_ref>
+	</index>
+	<index kind="regular" uuid="60C9866BCD7149CE988188A316127C37" type="3">
+		<field_ref uuid="FAABC669DD47461EADD1B422A2626DAD" name="UUID_Airport_To">
+			<table_ref uuid="9591B2513FBA4A0A9DD9A3574229F1FC" name="Line"/>
+		</field_ref>
+	</index>
+	<index kind="regular" uuid="93482D6E44E24A948522421400C1232F" type="1">
+		<field_ref uuid="7A620686F58C9F4AADE19995231BD584" name="realArrivalStmp">
+			<table_ref uuid="2A6BDA6EE463954AB582664E0A10D76E" name="Flight"/>
+		</field_ref>
+	</index>
+	<index kind="regular" unique_keys="true" uuid="991BDD3341474AF6A9805CDBB832A8E8" type="1">
+		<field_ref uuid="38A28D6C5FC744C7B203BCCCA2704C25" name="UUID">
+			<table_ref uuid="9591B2513FBA4A0A9DD9A3574229F1FC" name="Line"/>
+		</field_ref>
+	</index>
+	<index kind="regular" unique_keys="true" uuid="A7EB4B3C9F1D4170919B8A0D30DD2771" type="1">
+		<field_ref uuid="94D9C89F0E1A4E3582505FBD3FA14757" name="UUID">
+			<table_ref uuid="941D3C824FA14B388A33E07AF731EFDC" name="Country"/>
+		</field_ref>
+	</index>
+	<index kind="regular" uuid="C28F66290854449586C027CFCBD4306A" type="1">
+		<field_ref uuid="F47F24639347914E846912A35DD0671D" name="realDepartureStmp">
+			<table_ref uuid="2A6BDA6EE463954AB582664E0A10D76E" name="Flight"/>
+		</field_ref>
+	</index>
+	<index kind="regular" unique_keys="true" uuid="DD64FC3F791F4644AD734638AFE52D1E" type="1">
+		<field_ref uuid="9D1B94B4C91C4793904D9176ECDF18CC" name="UUID">
+			<table_ref uuid="FD981BC58D5B4E4E856352060047BCAD" name="Slot"/>
+		</field_ref>
+	</index>
+	<index kind="regular" uuid="E30C900E9C764F05BD9E7CD0F388EAE5" type="3">
+		<field_ref uuid="93A80750A51C4E96A913462810D47454" name="UUID_Line">
+			<table_ref uuid="FD981BC58D5B4E4E856352060047BCAD" name="Slot"/>
+		</field_ref>
+	</index>
+	<index kind="regular" uuid="EA4901F923456E4FB7C0D06312981EF8" type="3">
+		<field_ref uuid="6197F3D12DD787458759F4ABDC677FA0" name="UUID_Slot">
+			<table_ref uuid="2A6BDA6EE463954AB582664E0A10D76E" name="Flight"/>
+		</field_ref>
+	</index>
+	<index kind="regular" uuid="F15FA79CEFFF4234B21F080A2A02E45B" type="3">
+		<field_ref uuid="AA6F537BA7E08D4D86BBBD5BEB636D0D" name="date">
+			<table_ref uuid="2A6BDA6EE463954AB582664E0A10D76E" name="Flight"/>
+		</field_ref>
+	</index>
+	<index kind="regular" unique_keys="true" uuid="FC39C7FEF9E44ECABA3FA50AA76E5E4C" type="1">
+		<field_ref uuid="FDDB630342EB40D6BC26DF91C9D90791" name="UUID">
+			<table_ref uuid="591CC7CD2CC449B2ABD822FF264578DD" name="Airline"/>
+		</field_ref>
+	</index>
+	<index kind="regular" unique_keys="true" uuid="FD9B0C54D886E24A92B2B8D7A6E26E1B" type="1">
+		<field_ref uuid="A19F3DF03A1A0B4A9C57C3EC8968259E" name="UUID">
+			<table_ref uuid="F42B9416537FB848BB70A776686584BE" name="Aircraft"/>
+		</field_ref>
+	</index>
+	<base_extra>
+		<journal_file journal_file_enabled="false"/>
+	</base_extra>
+</base>

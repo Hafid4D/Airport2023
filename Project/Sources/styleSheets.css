@@ -1,0 +1,16 @@
+.mainListbox{
+    fill: white;
+    alternateFill: #EFEFEF;
+    verticalLineStroke: transparent;
+    horizontalLineStroke: transparent;
+}
+
+.info{
+    stroke:lightblue;
+}
+
+
+.label{
+    stroke:grey;
+}
+

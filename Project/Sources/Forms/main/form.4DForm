@@ -1,0 +1,393 @@
+{
+	"$4d": {
+		"version": "1",
+		"kind": "form"
+	},
+	"windowSizingX": "variable",
+	"windowSizingY": "variable",
+	"windowMinWidth": 0,
+	"windowMinHeight": 0,
+	"windowMaxWidth": 32767,
+	"windowMaxHeight": 32767,
+	"events": [
+		"onLoad",
+		"onValidate",
+		"onClick",
+		"onOutsideCall",
+		"onDoubleClick",
+		"onDrop",
+		"onMenuSelect",
+		"onPluginArea",
+		"onDragOver",
+		"onUnload",
+		"onTimer",
+		"onAfterKeystroke",
+		"onAfterEdit",
+		"onBeginDragOver",
+		"onBoundVariableChange",
+		"onPageChange"
+	],
+	"windowTitle": "window title",
+	"destination": "detailScreen",
+	"pages": [
+		{
+			"objects": {}
+		},
+		{
+			"objects": {
+				"Rectangle": {
+					"type": "rectangle",
+					"top": 0,
+					"left": 0,
+					"width": 1600,
+					"height": 170,
+					"stroke": "transparent",
+					"fill": "#F2EFFF",
+					"sizingX": "grow"
+				},
+				"rbAirport": {
+					"type": "radio",
+					"text": "Airports",
+					"top": 10,
+					"left": 10,
+					"width": 150,
+					"height": 150,
+					"events": [
+						"onClick"
+					],
+					"style": "toolbar",
+					"icon": "/RESOURCES/image/icon/airport128x128png.png",
+					"method": "ObjectMethods/rbAirport.4dm",
+					"focusable": false,
+					"enterable": false,
+					"dataSource": "Form:C1466.rbAirport",
+					"iconFrames": 1,
+					"radioGroup": "mainIcons"
+				},
+				"rbAircraft": {
+					"type": "radio",
+					"text": "Aircrafts",
+					"top": 10,
+					"left": 172,
+					"width": 150,
+					"height": 150,
+					"events": [
+						"onClick"
+					],
+					"style": "toolbar",
+					"icon": "/RESOURCES/image/icon/airplane128x128.png",
+					"method": "ObjectMethods/rbAircraft.4dm",
+					"focusable": false,
+					"enterable": false,
+					"dataSource": "Form:C1466.rbAircraft",
+					"iconFrames": 1,
+					"radioGroup": "mainIcons"
+				},
+				"rbFlight": {
+					"type": "radio",
+					"text": "Flights",
+					"top": 10,
+					"left": 334,
+					"width": 150,
+					"height": 150,
+					"events": [
+						"onClick"
+					],
+					"style": "toolbar",
+					"icon": "/RESOURCES/image/icon/flight128x128.png",
+					"focusable": false,
+					"enterable": false,
+					"dataSource": "Form:C1466.rbFlight",
+					"iconFrames": 1,
+					"radioGroup": "mainIcons",
+					"method": "ObjectMethods/rbFlight.4dm"
+				},
+				"rbLine": {
+					"type": "radio",
+					"text": "Lines",
+					"top": 10,
+					"left": 658,
+					"width": 150,
+					"height": 150,
+					"events": [
+						"onClick"
+					],
+					"style": "toolbar",
+					"icon": "/RESOURCES/image/icon/line128x128.png",
+					"focusable": false,
+					"enterable": false,
+					"dataSource": "Form:C1466.rbLine",
+					"iconFrames": 1,
+					"radioGroup": "mainIcons",
+					"method": "ObjectMethods/rbLine.4dm"
+				},
+				"rbAirline": {
+					"type": "radio",
+					"text": "Airlines",
+					"top": 10,
+					"left": 820,
+					"width": 150,
+					"height": 150,
+					"events": [
+						"onClick"
+					],
+					"style": "toolbar",
+					"icon": "/RESOURCES/image/icon/airline128x128.png",
+					"focusable": false,
+					"enterable": false,
+					"dataSource": "Form:C1466.rbAirline",
+					"iconFrames": 1,
+					"radioGroup": "mainIcons",
+					"method": "ObjectMethods/rbAirline.4dm"
+				},
+				"rbCountry": {
+					"type": "radio",
+					"text": "Countries",
+					"top": 10,
+					"left": 983,
+					"width": 150,
+					"height": 150,
+					"events": [
+						"onClick"
+					],
+					"style": "toolbar",
+					"icon": "/RESOURCES/image/icon/country128x128.png",
+					"focusable": false,
+					"enterable": false,
+					"dataSource": "Form:C1466.rbCountry",
+					"iconFrames": 1,
+					"radioGroup": "mainIcons",
+					"method": "ObjectMethods/rbCountry.4dm"
+				},
+				"lb_items": {
+					"type": "listbox",
+					"left": 10,
+					"top": 223,
+					"width": 551,
+					"height": 733,
+					"events": [
+						"onClick",
+						"onHeaderClick",
+						"onDataChange",
+						"onSelectionChange"
+					],
+					"listboxType": "collection",
+					"dataSource": "Form:C1466.lb_items",
+					"scrollbarHorizontal": "hidden",
+					"class": "mainListbox",
+					"method": "ObjectMethods/lb_items.4dm",
+					"currentItemSource": "Form:C1466.currentItem",
+					"selectionMode": "single",
+					"resizingMode": "legacy",
+					"sizingX": "grow",
+					"sizingY": "grow",
+					"focusable": true,
+					"hideFocusRing": true,
+					"columns": []
+				},
+				"subformPanel": {
+					"type": "subform",
+					"left": 576,
+					"top": 223,
+					"width": 1015,
+					"height": 733,
+					"dataSource": "Form:C1466.subform",
+					"sizingX": "grow",
+					"sizingY": "grow"
+				},
+				"Splitter": {
+					"type": "splitter",
+					"left": 567,
+					"top": 169,
+					"width": 4,
+					"height": 816,
+					"sizingY": "grow"
+				},
+				"inputItemsLength": {
+					"type": "input",
+					"left": 350,
+					"top": 961,
+					"width": 211,
+					"height": 17,
+					"enterable": false,
+					"focusable": false,
+					"fill": "transparent",
+					"borderStyle": "none",
+					"dataSource": "Form:C1466.lb_items.length",
+					"class": "info",
+					"sizingX": "move",
+					"sizingY": "move",
+					"dataSourceTypeHint": "integer",
+					"numberFormat": "###,###,###,##0",
+					"stroke": "#0000cd"
+				},
+				"bSearchAdvancedDialog": {
+					"type": "button",
+					"text": "",
+					"top": 179,
+					"left": 10,
+					"width": 79,
+					"height": 38,
+					"events": [
+						"onClick"
+					],
+					"style": "bevel",
+					"icon": "/RESOURCES/image/button/magnifier24x24.png",
+					"imageHugsTitle": true,
+					"method": "ObjectMethods/bSearchAdvancedDialog.4dm",
+					"focusable": false
+				},
+				"searchbox_border": {
+					"type": "rectangle",
+					"top": 180,
+					"left": 101,
+					"width": 460,
+					"height": 37,
+					"stroke": "#c0c0c0",
+					"borderRadius": 15,
+					"sizingX": "grow",
+					"strokeWidth": 2
+				},
+				"searchbox": {
+					"type": "input",
+					"left": 149,
+					"top": 189,
+					"width": 375,
+					"height": 18,
+					"fontSize": 14,
+					"borderStyle": "none",
+					"fill": "transparent",
+					"dataSource": "Form:C1466.searchbox",
+					"sizingX": "grow",
+					"enterable": true,
+					"focusable": false,
+					"contextMenu": "none",
+					"events": [
+						"onLosingFocus",
+						"onGettingFocus",
+						"onDataChange"
+					],
+					"method": "ObjectMethods/searchbox.4dm",
+					"hideFocusRing": true
+				},
+				"Button": {
+					"type": "button",
+					"text": "X",
+					"top": 187,
+					"left": 532,
+					"width": 21,
+					"height": 24,
+					"events": [
+						"onClick"
+					],
+					"fontWeight": "bold",
+					"stroke": "#ff0000",
+					"style": "custom",
+					"sizingX": "move",
+					"fontSize": 13,
+					"method": "ObjectMethods/Button.4dm"
+				},
+				"rbSlot": {
+					"type": "radio",
+					"text": "Slots",
+					"top": 10,
+					"left": 496,
+					"width": 150,
+					"height": 150,
+					"events": [
+						"onClick"
+					],
+					"style": "toolbar",
+					"icon": "/RESOURCES/image/icon/slot128x128.png",
+					"focusable": false,
+					"enterable": false,
+					"dataSource": "Form:C1466.rbSlot",
+					"iconFrames": 1,
+					"radioGroup": "mainIcons",
+					"method": "ObjectMethods/rbSlot.4dm"
+				},
+				"bSearchMagnifier": {
+					"type": "button",
+					"text": "",
+					"top": 185,
+					"left": 114,
+					"width": 27,
+					"height": 26,
+					"events": [
+						"onClick"
+					],
+					"style": "custom",
+					"icon": "/RESOURCES/image/button/magnifier24x24.png",
+					"method": "ObjectMethods/bSearchMagnifier.4dm",
+					"popupPlacement": "linked",
+					"focusable": false
+				},
+				"Button1": {
+					"type": "button",
+					"text": "trap enter",
+					"top": 1016,
+					"left": 7,
+					"width": 76,
+					"height": 40,
+					"events": [
+						"onClick"
+					],
+					"shortcutAccel": false,
+					"shortcutControl": false,
+					"shortcutShift": false,
+					"shortcutAlt": false,
+					"shortcutKey": "[Enter]"
+				},
+				"btQueryPlan": {
+					"type": "button",
+					"text": "plan",
+					"top": 961,
+					"left": 7,
+					"width": 34,
+					"height": 16,
+					"events": [
+						"onClick"
+					],
+					"icon": "",
+					"style": "regular",
+					"imageHugsTitle": true,
+					"dataSource": "",
+					"visibility": "hidden",
+					"method": "ObjectMethods/btQueryPlan.4dm",
+					"stroke": "#ff0000",
+					"sizingY": "move"
+				},
+				"btQueryPath": {
+					"type": "button",
+					"text": "path",
+					"top": 961,
+					"left": 49,
+					"width": 34,
+					"height": 16,
+					"events": [
+						"onClick"
+					],
+					"icon": "",
+					"style": "regular",
+					"imageHugsTitle": true,
+					"dataSource": "",
+					"visibility": "hidden",
+					"method": "ObjectMethods/btQueryPath.4dm",
+					"stroke": "#1e90ff",
+					"sizingY": "move"
+				}
+			}
+		}
+	],
+	"geometryStamp": 288,
+	"editor": {
+		"activeView": "View 1",
+		"defaultView": "View 1",
+		"views": {
+			"View 1": {}
+		}
+	},
+	"method": "method.4dm",
+	"width": 1600,
+	"height": 985
+}

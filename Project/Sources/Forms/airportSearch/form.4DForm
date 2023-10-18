@@ -1,0 +1,882 @@
+{
+	"$4d": {
+		"version": "1",
+		"kind": "form"
+	},
+	"windowSizingX": "variable",
+	"windowSizingY": "variable",
+	"windowMinWidth": 0,
+	"windowMinHeight": 0,
+	"windowMaxWidth": 32767,
+	"windowMaxHeight": 32767,
+	"events": [
+		"onLoad",
+		"onPageChange",
+		"onValidate",
+		"onClick",
+		"onDoubleClick",
+		"onOutsideCall",
+		"onBeginDragOver",
+		"onDragOver",
+		"onDrop",
+		"onAfterKeystroke",
+		"onMenuSelect",
+		"onPluginArea",
+		"onAfterEdit",
+		"onTimer",
+		"onBoundVariableChange"
+	],
+	"windowTitle": "Advanced Search",
+	"destination": "detailScreen",
+	"pages": [
+		{
+			"objects": {
+				"Group Box1": {
+					"type": "groupBox",
+					"text": "Flights arriving from",
+					"top": 269,
+					"left": 24,
+					"width": 476,
+					"height": 180
+				},
+				"Group Box": {
+					"type": "groupBox",
+					"text": "Airport",
+					"top": 8,
+					"left": 24,
+					"width": 476,
+					"height": 248
+				},
+				"Group Box2": {
+					"type": "groupBox",
+					"text": "Flights to",
+					"top": 269,
+					"left": 529,
+					"width": 475,
+					"height": 180
+				},
+				"Group Box3": {
+					"type": "groupBox",
+					"text": "Aircraft",
+					"top": 147,
+					"left": 528,
+					"width": 476,
+					"height": 109
+				},
+				"Group Box4": {
+					"type": "groupBox",
+					"text": "Airline",
+					"top": 8,
+					"left": 528,
+					"width": 476,
+					"height": 124
+				},
+				"Group Box5": {
+					"type": "groupBox",
+					"text": "Options",
+					"top": 469,
+					"left": 24,
+					"width": 474,
+					"height": 178
+				}
+			}
+		},
+		{
+			"objects": {
+				"Text": {
+					"type": "text",
+					"text": "IATA code",
+					"top": 115,
+					"left": 28,
+					"width": 118,
+					"height": 16,
+					"class": "label"
+				},
+				"Text1": {
+					"type": "text",
+					"text": "City",
+					"top": 38,
+					"left": 28,
+					"width": 118,
+					"height": 16,
+					"class": "label"
+				},
+				"Text2": {
+					"type": "text",
+					"text": "Country ",
+					"top": 77,
+					"left": 28,
+					"width": 118,
+					"height": 16,
+					"class": "label"
+				},
+				"Text4": {
+					"type": "text",
+					"text": "ICAO code",
+					"top": 116,
+					"left": 253,
+					"width": 118,
+					"height": 16,
+					"class": "label"
+				},
+				"Check Box": {
+					"type": "checkbox",
+					"text": "International",
+					"top": 214,
+					"left": 49,
+					"width": 120,
+					"height": 16,
+					"events": [
+						"onClick"
+					],
+					"dataSource": "Form:C1466.search.airportIntl",
+					"dataSourceTypeHint": "boolean"
+				},
+				"Check Box1": {
+					"type": "checkbox",
+					"text": "Domestic",
+					"top": 214,
+					"left": 326,
+					"width": 120,
+					"height": 16,
+					"events": [
+						"onClick"
+					],
+					"dataSource": "Form:C1466.search.airportDomestic",
+					"dataSourceTypeHint": "boolean"
+				},
+				"Check Box2": {
+					"type": "checkbox",
+					"text": "International Hub",
+					"top": 214,
+					"left": 174,
+					"width": 120,
+					"height": 16,
+					"events": [
+						"onClick"
+					],
+					"dataSource": "Form:C1466.search.airportIntlHub",
+					"dataSourceTypeHint": "boolean"
+				},
+				"Input": {
+					"type": "input",
+					"left": 166,
+					"top": 38,
+					"width": 90,
+					"height": 17,
+					"dataSource": "Form:C1466.search.city",
+					"placeholder": "New York"
+				},
+				"Input2": {
+					"type": "input",
+					"left": 166,
+					"top": 77,
+					"width": 48,
+					"height": 17,
+					"dataSource": "Form:C1466.search.countryCode",
+					"placeholder": "US"
+				},
+				"Input3": {
+					"type": "input",
+					"left": 166,
+					"top": 115,
+					"width": 48,
+					"height": 17,
+					"dataSource": "Form:C1466.search.IATAcode",
+					"placeholder": "JFK"
+				},
+				"Input4": {
+					"type": "input",
+					"left": 353,
+					"top": 116,
+					"width": 48,
+					"height": 17,
+					"dataSource": "Form:C1466.search.ICAOcode",
+					"placeholder": "KJFK"
+				},
+				"Text7": {
+					"type": "text",
+					"text": "Order the result by",
+					"top": 499,
+					"left": 28,
+					"width": 138,
+					"height": 16,
+					"class": "label"
+				},
+				"Popup Dropdown List": {
+					"type": "dropdown",
+					"left": 166,
+					"top": 497,
+					"width": 174,
+					"height": 21,
+					"events": [
+						"onDataChange"
+					],
+					"dataSource": "Form:C1466.search.orderByAttribute"
+				},
+				"Text10": {
+					"type": "text",
+					"text": "Arrival time between",
+					"top": 385,
+					"left": 28,
+					"width": 138,
+					"height": 16,
+					"class": "label"
+				},
+				"Text14": {
+					"type": "text",
+					"text": "Departure time between",
+					"top": 385,
+					"left": 540,
+					"width": 158,
+					"height": 16,
+					"class": "label"
+				},
+				"Input5": {
+					"type": "input",
+					"left": 267,
+					"top": 38,
+					"width": 188,
+					"height": 17,
+					"dataSource": "Form:C1466.search.location",
+					"placeholder": "John F Kennedy Intl"
+				},
+				"Text3": {
+					"type": "text",
+					"text": "Level",
+					"top": 151,
+					"left": 28,
+					"width": 118,
+					"height": 16,
+					"class": "label"
+				},
+				"Input1": {
+					"type": "input",
+					"left": 166,
+					"top": 151,
+					"width": 48,
+					"height": 17,
+					"dataSource": "Form:C1466.search.level",
+					"placeholder": "2"
+				},
+				"Text5": {
+					"type": "text",
+					"text": "City",
+					"top": 301,
+					"left": 28,
+					"width": 118,
+					"height": 16,
+					"class": "label"
+				},
+				"Text6": {
+					"type": "text",
+					"text": "Country ",
+					"top": 340,
+					"left": 28,
+					"width": 118,
+					"height": 16,
+					"class": "label"
+				},
+				"Input6": {
+					"type": "input",
+					"left": 166,
+					"top": 301,
+					"width": 90,
+					"height": 17,
+					"dataSource": "Form:C1466.search.flightsFrom.city",
+					"placeholder": "New York"
+				},
+				"Input7": {
+					"type": "input",
+					"left": 166,
+					"top": 340,
+					"width": 48,
+					"height": 17,
+					"dataSource": "Form:C1466.search.flightsFrom.countryCode",
+					"placeholder": "US"
+				},
+				"Input8": {
+					"type": "input",
+					"left": 267,
+					"top": 301,
+					"width": 188,
+					"height": 17,
+					"dataSource": "Form:C1466.search.flightsFrom.location",
+					"placeholder": "John F Kennedy Intl"
+				},
+				"Text8": {
+					"type": "text",
+					"text": "City",
+					"top": 301,
+					"left": 540,
+					"width": 118,
+					"height": 16,
+					"class": "label"
+				},
+				"Text9": {
+					"type": "text",
+					"text": "Country ",
+					"top": 340,
+					"left": 540,
+					"width": 118,
+					"height": 16,
+					"class": "label"
+				},
+				"Input10": {
+					"type": "input",
+					"left": 701,
+					"top": 301,
+					"width": 90,
+					"height": 17,
+					"dataSource": "Form:C1466.search.flightsTo.city",
+					"placeholder": "New York"
+				},
+				"Input12": {
+					"type": "input",
+					"left": 701,
+					"top": 340,
+					"width": 48,
+					"height": 17,
+					"dataSource": "Form:C1466.search.flightsTo.countryCode",
+					"placeholder": "US"
+				},
+				"Input13": {
+					"type": "input",
+					"left": 800,
+					"top": 301,
+					"width": 188,
+					"height": 17,
+					"dataSource": "Form:C1466.search.flightsTo.location",
+					"placeholder": "John F Kennedy Intl"
+				},
+				"TimePickerSingle": {
+					"type": "subform",
+					"top": 381,
+					"left": 700,
+					"width": 82,
+					"height": 24,
+					"dataSource": "Form:C1466.search.flightsTo.departureTimeFrom",
+					"dataSourceTypeHint": "time",
+					"detailForm": "TimePicker_Pop1",
+					"focusable": false,
+					"hideFocusRing": true,
+					"deletableInList": false,
+					"doubleClickInRowAction": "editSubrecord",
+					"doubleClickInEmptyAreaAction": "addSubrecord",
+					"selectionMode": "multiple",
+					"printFrame": "variable",
+					"method": "ObjectMethods/TimePickerSingle.4dm",
+					"events": [
+						"onLoad"
+					]
+				},
+				"TimePickerSingle1": {
+					"type": "subform",
+					"top": 381,
+					"left": 319,
+					"width": 82,
+					"height": 24,
+					"dataSource": "Form:C1466.search.flightsFrom.arrivalTimeTo",
+					"dataSourceTypeHint": "time",
+					"detailForm": "TimePicker_Pop1",
+					"focusable": false,
+					"hideFocusRing": true,
+					"deletableInList": false,
+					"doubleClickInRowAction": "editSubrecord",
+					"doubleClickInEmptyAreaAction": "addSubrecord",
+					"selectionMode": "multiple",
+					"printFrame": "variable",
+					"method": "ObjectMethods/TimePickerSingle1.4dm",
+					"events": [
+						"onLoad"
+					]
+				},
+				"TimePickerSingle2": {
+					"type": "subform",
+					"top": 381,
+					"left": 166,
+					"width": 82,
+					"height": 24,
+					"dataSource": "Form:C1466.search.flightsFrom.arrivalTimeFrom",
+					"dataSourceTypeHint": "time",
+					"detailForm": "TimePicker_Pop1",
+					"focusable": false,
+					"hideFocusRing": true,
+					"deletableInList": false,
+					"doubleClickInRowAction": "editSubrecord",
+					"doubleClickInEmptyAreaAction": "addSubrecord",
+					"selectionMode": "multiple",
+					"printFrame": "variable",
+					"method": "ObjectMethods/TimePickerSingle2.4dm",
+					"events": [
+						"onLoad"
+					]
+				},
+				"Text11": {
+					"type": "text",
+					"text": "and",
+					"top": 385,
+					"left": 268,
+					"width": 38,
+					"height": 16,
+					"class": "label"
+				},
+				"TimePickerSingle3": {
+					"type": "subform",
+					"top": 381,
+					"left": 852,
+					"width": 82,
+					"height": 24,
+					"dataSource": "Form:C1466.search.flightsTo.departureTimeTo",
+					"dataSourceTypeHint": "time",
+					"detailForm": "TimePicker_Pop1",
+					"focusable": false,
+					"hideFocusRing": true,
+					"deletableInList": false,
+					"doubleClickInRowAction": "editSubrecord",
+					"doubleClickInEmptyAreaAction": "addSubrecord",
+					"selectionMode": "multiple",
+					"printFrame": "variable",
+					"method": "ObjectMethods/TimePickerSingle3.4dm",
+					"events": [
+						"onLoad"
+					]
+				},
+				"Text12": {
+					"type": "text",
+					"text": "and",
+					"top": 385,
+					"left": 802,
+					"width": 38,
+					"height": 16,
+					"class": "label"
+				},
+				"btCountry": {
+					"type": "button",
+					"top": 73,
+					"left": 257,
+					"width": 198,
+					"height": 23,
+					"fontFamily": "System Font",
+					"fontSize": 13,
+					"focusable": false,
+					"text": "Choose a country",
+					"icon": "/RESOURCES/image/flags/tiny/_United Nations.png",
+					"popupPlacement": "linked",
+					"textPlacement": "right",
+					"style": "bevel",
+					"method": "ObjectMethods/btCountry.4dm",
+					"events": [
+						"onClick"
+					]
+				},
+				"btFlightsFromCountry": {
+					"type": "button",
+					"top": 337,
+					"left": 257,
+					"width": 198,
+					"height": 23,
+					"fontFamily": "System Font",
+					"fontSize": 13,
+					"focusable": false,
+					"text": "Choose a country",
+					"icon": "/RESOURCES/image/flags/tiny/_United Nations.png",
+					"popupPlacement": "linked",
+					"textPlacement": "right",
+					"style": "bevel",
+					"method": "ObjectMethods/btFlightsFromCountry.4dm",
+					"events": [
+						"onClick"
+					]
+				},
+				"btFlightsToCountry": {
+					"type": "button",
+					"top": 337,
+					"left": 793,
+					"width": 198,
+					"height": 23,
+					"fontFamily": "System Font",
+					"fontSize": 13,
+					"focusable": false,
+					"text": "Choose a country",
+					"icon": "/RESOURCES/image/flags/tiny/_United Nations.png",
+					"popupPlacement": "linked",
+					"textPlacement": "right",
+					"style": "bevel",
+					"method": "ObjectMethods/btFlightsToCountry.4dm",
+					"events": [
+						"onClick"
+					]
+				},
+				"Text13": {
+					"type": "text",
+					"text": "Country ",
+					"top": 76,
+					"left": 540,
+					"width": 118,
+					"height": 16,
+					"class": "label"
+				},
+				"Input9": {
+					"type": "input",
+					"left": 701,
+					"top": 76,
+					"width": 48,
+					"height": 17,
+					"dataSource": "Form:C1466.search.airline.countryCode",
+					"placeholder": "FR"
+				},
+				"btAirlineCountry": {
+					"type": "button",
+					"top": 73,
+					"left": 793,
+					"width": 198,
+					"height": 23,
+					"fontFamily": "System Font",
+					"fontSize": 13,
+					"focusable": false,
+					"text": "Choose a country",
+					"icon": "/RESOURCES/image/flags/tiny/_United Nations.png",
+					"popupPlacement": "linked",
+					"textPlacement": "right",
+					"style": "bevel",
+					"method": "ObjectMethods/btAirlineCountry.4dm",
+					"events": [
+						"onClick"
+					]
+				},
+				"Text15": {
+					"type": "text",
+					"text": "Name",
+					"top": 38,
+					"left": 540,
+					"width": 118,
+					"height": 16,
+					"class": "label"
+				},
+				"Input11": {
+					"type": "input",
+					"left": 701,
+					"top": 38,
+					"width": 188,
+					"height": 17,
+					"dataSource": "Form:C1466.search.airline.name",
+					"placeholder": "Air France"
+				},
+				"Text16": {
+					"type": "text",
+					"text": "IATA code",
+					"top": 109,
+					"left": 540,
+					"width": 118,
+					"height": 16,
+					"class": "label"
+				},
+				"Text17": {
+					"type": "text",
+					"text": "ICAO code",
+					"top": 108,
+					"left": 793,
+					"width": 118,
+					"height": 16,
+					"class": "label"
+				},
+				"Input14": {
+					"type": "input",
+					"left": 700,
+					"top": 108,
+					"width": 48,
+					"height": 17,
+					"dataSource": "Form:C1466.search.airline.IATAcode",
+					"placeholder": "AF"
+				},
+				"Input15": {
+					"type": "input",
+					"left": 893,
+					"top": 108,
+					"width": 48,
+					"height": 17,
+					"dataSource": "Form:C1466.search.airline.ICAOcode",
+					"placeholder": "AFR"
+				},
+				"Text18": {
+					"type": "text",
+					"text": "Name",
+					"top": 177,
+					"left": 540,
+					"width": 118,
+					"height": 16,
+					"class": "label"
+				},
+				"Input16": {
+					"type": "input",
+					"left": 701,
+					"top": 177,
+					"width": 188,
+					"height": 17,
+					"dataSource": "Form:C1466.search.aircraft.name",
+					"placeholder": "A380"
+				},
+				"Popup Dropdown List1": {
+					"type": "dropdown",
+					"left": 166,
+					"top": 415,
+					"width": 235,
+					"height": 20,
+					"events": [
+						"onDataChange"
+					],
+					"dataSource": "Form:C1466.search.flightsFrom.period",
+					"dataSourceTypeHint": "object"
+				},
+				"Text19": {
+					"type": "text",
+					"text": "Period",
+					"top": 419,
+					"left": 28,
+					"width": 138,
+					"height": 16,
+					"class": "label"
+				},
+				"Popup Dropdown List2": {
+					"type": "dropdown",
+					"left": 701,
+					"top": 415,
+					"width": 235,
+					"height": 20,
+					"events": [
+						"onDataChange"
+					],
+					"dataSource": "Form:C1466.search.flightsTo.period",
+					"dataSourceTypeHint": "object"
+				},
+				"Text20": {
+					"type": "text",
+					"text": "Period",
+					"top": 419,
+					"left": 540,
+					"width": 138,
+					"height": 16,
+					"class": "label"
+				},
+				"Text21": {
+					"type": "text",
+					"text": "Conjonction",
+					"top": 527,
+					"left": 28,
+					"width": 138,
+					"height": 16,
+					"class": "label"
+				},
+				"Popup Dropdown List3": {
+					"type": "dropdown",
+					"left": 166,
+					"top": 525,
+					"width": 174,
+					"height": 21,
+					"events": [
+						"onDataChange"
+					],
+					"dataSource": "Form:C1466.search.conjonction"
+				},
+				"btQuery1": {
+					"type": "button",
+					"text": "Classic Query ",
+					"top": 480,
+					"left": 529,
+					"width": 206,
+					"height": 30,
+					"events": [
+						"onClick"
+					],
+					"method": "ObjectMethods/btQuery1.4dm"
+				},
+				"cbGenerateLogs": {
+					"type": "checkbox",
+					"text": "Generate client-server logs",
+					"top": 557,
+					"left": 166,
+					"width": 228,
+					"height": 16,
+					"events": [
+						"onClick"
+					],
+					"dataSource": "Form:C1466.search.logs",
+					"dataSourceTypeHint": "boolean"
+				},
+				"btQuery2": {
+					"type": "button",
+					"text": "Classic Query with ORDA",
+					"top": 525,
+					"left": 529,
+					"width": 206,
+					"height": 30,
+					"events": [
+						"onClick"
+					],
+					"visibility": "hidden",
+					"method": "ObjectMethods/btQuery2.4dm"
+				},
+				"btQuery3": {
+					"type": "button",
+					"text": "Modern ORDA Query ",
+					"top": 570,
+					"left": 529,
+					"width": 206,
+					"height": 30,
+					"events": [
+						"onClick"
+					],
+					"visibility": "hidden",
+					"method": "ObjectMethods/btQuery3.4dm"
+				},
+				"Button": {
+					"type": "button",
+					"text": "⌘+⌥+2",
+					"top": 678,
+					"left": 528,
+					"width": 92,
+					"height": 27,
+					"events": [
+						"onClick"
+					],
+					"shortcutAccel": true,
+					"shortcutControl": false,
+					"shortcutShift": false,
+					"shortcutAlt": true,
+					"shortcutKey": "2",
+					"method": "ObjectMethods/Button.4dm"
+				},
+				"Button1": {
+					"type": "button",
+					"text": "⌘+⌥+3",
+					"top": 678,
+					"left": 628,
+					"width": 92,
+					"height": 27,
+					"events": [
+						"onClick"
+					],
+					"shortcutAccel": true,
+					"shortcutControl": false,
+					"shortcutShift": false,
+					"shortcutAlt": true,
+					"shortcutKey": "3",
+					"method": "ObjectMethods/Button1.4dm"
+				},
+				"Check Box4": {
+					"type": "checkbox",
+					"text": "Display code in debugger",
+					"top": 579,
+					"left": 166,
+					"width": 228,
+					"height": 16,
+					"events": [
+						"onClick"
+					],
+					"dataSource": "Form:C1466.search.trace",
+					"dataSourceTypeHint": "boolean"
+				},
+				"btFillForm": {
+					"type": "button",
+					"text": "⌘+⌥+9",
+					"top": 678,
+					"left": 24,
+					"width": 92,
+					"height": 27,
+					"events": [
+						"onClick"
+					],
+					"shortcutAccel": true,
+					"shortcutControl": false,
+					"shortcutShift": false,
+					"shortcutAlt": true,
+					"shortcutKey": "9",
+					"method": "ObjectMethods/btFillForm.4dm"
+				},
+				"Check Box5": {
+					"type": "checkbox",
+					"text": "Use local set if possible",
+					"top": 601,
+					"left": 166,
+					"width": 228,
+					"height": 16,
+					"events": [
+						"onClick"
+					],
+					"dataSource": "Form:C1466.search.useLocalSet",
+					"dataSourceTypeHint": "boolean"
+				},
+				"Input17": {
+					"type": "input",
+					"left": 531,
+					"top": 620,
+					"width": 460,
+					"height": 33,
+					"enterable": false,
+					"focusable": false,
+					"stroke": "#dda0dd",
+					"fill": "transparent",
+					"borderStyle": "none",
+					"fontStyle": "italic",
+					"dataSource": "Form:C1466.search.fill"
+				}
+			},
+			"entryOrder": [
+				"Input",
+				"Input5",
+				"Input2",
+				"btCountry",
+				"Input3",
+				"Input4",
+				"Input1",
+				"Check Box",
+				"Check Box2",
+				"Check Box1",
+				"Input11",
+				"Input9",
+				"btAirlineCountry",
+				"Input14",
+				"Input15",
+				"Input16",
+				"Input6",
+				"Input8",
+				"Input7",
+				"btFlightsFromCountry",
+				"TimePickerSingle2",
+				"TimePickerSingle1",
+				"Popup Dropdown List1",
+				"Input10",
+				"Input13",
+				"Input12",
+				"btFlightsToCountry",
+				"TimePickerSingle",
+				"TimePickerSingle3",
+				"Popup Dropdown List2",
+				"Popup Dropdown List",
+				"Popup Dropdown List3",
+				"cbGenerateLogs",
+				"Check Box4",
+				"Check Box5",
+				"btQuery1",
+				"btQuery2",
+				"btQuery3",
+				"btFillForm",
+				"Button",
+				"Button1",
+				"Input17"
+			]
+		}
+	],
+	"geometryStamp": 1038,
+	"editor": {
+		"activeView": "View 1",
+		"defaultView": "View 1",
+		"views": {
+			"View 1": {}
+		}
+	},
+	"method": "method.4dm",
+	"width": 1024,
+	"height": 667
+}

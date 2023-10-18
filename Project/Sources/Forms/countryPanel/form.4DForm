@@ -1,0 +1,687 @@
+{
+	"$4d": {
+		"version": "1",
+		"kind": "form"
+	},
+	"windowSizingX": "variable",
+	"windowSizingY": "variable",
+	"windowMinWidth": 0,
+	"windowMinHeight": 0,
+	"windowMaxWidth": 32767,
+	"windowMaxHeight": 32767,
+	"rightMargin": 0,
+	"bottomMargin": 0,
+	"events": [
+		"onLoad",
+		"onPageChange",
+		"onValidate",
+		"onClick",
+		"onDoubleClick",
+		"onOutsideCall",
+		"onBeginDragOver",
+		"onDragOver",
+		"onDrop",
+		"onAfterKeystroke",
+		"onMenuSelect",
+		"onPluginArea",
+		"onAfterEdit",
+		"onTimer",
+		"onBoundVariableChange"
+	],
+	"windowTitle": "window title",
+	"destination": "detailScreen",
+	"pages": [
+		{
+			"objects": {
+				"bkgd": {
+					"type": "rectangle",
+					"top": 0,
+					"left": 0,
+					"width": 1015,
+					"height": 728,
+					"stroke": "transparent",
+					"fill": "#191970",
+					"sizingX": "grow",
+					"sizingY": "grow"
+				}
+			}
+		},
+		{
+			"objects": {
+				"Rectangle": {
+					"type": "rectangle",
+					"top": 219,
+					"left": -1,
+					"width": 458,
+					"height": 34,
+					"stroke": "transparent",
+					"fill": "#337DB6"
+				},
+				"Text": {
+					"type": "text",
+					"text": "Airports",
+					"top": 228,
+					"left": 97,
+					"width": 191,
+					"height": 16,
+					"stroke": "#FFFFFF",
+					"fontWeight": "bold"
+				},
+				"Rectangle1": {
+					"type": "rectangle",
+					"top": 0,
+					"left": 0,
+					"width": 60,
+					"height": 219,
+					"stroke": "#FFFFFF",
+					"fill": "#c0c0c0"
+				},
+				"Rectangle2": {
+					"type": "rectangle",
+					"top": 0,
+					"left": 59,
+					"width": 398,
+					"height": 219,
+					"stroke": "#FFFFFF",
+					"fill": "#DFDFDF"
+				},
+				"Text1": {
+					"type": "text",
+					"text": "Country name",
+					"top": 5,
+					"left": 64,
+					"width": 107,
+					"height": 16,
+					"stroke": "#808080",
+					"fontSize": 12
+				},
+				"Input": {
+					"type": "input",
+					"left": 64,
+					"top": 25,
+					"width": 377,
+					"height": 17,
+					"dataSource": "Form:C1466.Country.name",
+					"enterable": false,
+					"focusable": false,
+					"fill": "transparent",
+					"borderStyle": "none",
+					"fontSize": 13
+				},
+				"Text2": {
+					"type": "text",
+					"text": "Codes",
+					"top": 53,
+					"left": 64,
+					"width": 107,
+					"height": 16,
+					"stroke": "#808080",
+					"fontSize": 12
+				},
+				"Text3": {
+					"type": "text",
+					"text": "Continent",
+					"top": 53,
+					"left": 271,
+					"width": 107,
+					"height": 16,
+					"stroke": "#808080",
+					"fontSize": 12
+				},
+				"Input4": {
+					"type": "input",
+					"left": 273,
+					"top": 73,
+					"width": 137,
+					"height": 17,
+					"dataSource": "Form:C1466.Country.continent",
+					"enterable": false,
+					"focusable": false,
+					"fill": "transparent",
+					"borderStyle": "none",
+					"fontSize": 13
+				},
+				"Static Picture1": {
+					"type": "picture",
+					"top": 5,
+					"left": 11,
+					"width": 36,
+					"height": 36,
+					"picture": "/RESOURCES/image/categoryIcon/passport.png",
+					"pictureFormat": "scaled"
+				},
+				"Static Picture2": {
+					"type": "picture",
+					"top": 224,
+					"left": 64,
+					"width": 24,
+					"height": 24,
+					"picture": "/RESOURCES/image/categoryIcon/airportTower.png",
+					"pictureFormat": "scaled"
+				},
+				"Rectangle3": {
+					"type": "rectangle",
+					"top": 253,
+					"left": 0,
+					"width": 60,
+					"height": 241,
+					"stroke": "#FFFFFF",
+					"fill": "#c0c0c0"
+				},
+				"Static Picture3": {
+					"type": "picture",
+					"top": 260,
+					"left": 12,
+					"width": 36,
+					"height": 36,
+					"picture": "/RESOURCES/image/categoryIcon/takeoff.png",
+					"pictureFormat": "scaled"
+				},
+				"LB_airports": {
+					"type": "listbox",
+					"left": 60,
+					"top": 253,
+					"width": 396,
+					"height": 241,
+					"events": [
+						"onClick",
+						"onHeaderClick",
+						"onDataChange",
+						"onSelectionChange"
+					],
+					"showHeaders": false,
+					"horizontalLineStroke": "transparent",
+					"verticalLineStroke": "transparent",
+					"borderStyle": "none",
+					"scrollbarHorizontal": "hidden",
+					"listboxType": "collection",
+					"fill": "#DFDFDF",
+					"alternateFill": "#E8E8E8",
+					"dataSource": "Form:C1466.Country.airports",
+					"resizingMode": "legacy",
+					"scrollbarVertical": "visible",
+					"columns": [
+						{
+							"header": {
+								"text": "Header1",
+								"name": "Header1"
+							},
+							"name": "Column1",
+							"footer": {
+								"name": "Footer1"
+							},
+							"dataSource": "This:C1470.codeIATA",
+							"width": 50,
+							"enterable": false
+						},
+						{
+							"header": {
+								"name": "Header2",
+								"text": "Header2"
+							},
+							"name": "Column2",
+							"footer": {
+								"name": "Footer2"
+							},
+							"dataSource": "This:C1470.city",
+							"enterable": false,
+							"width": 140
+						},
+						{
+							"header": {
+								"name": "Header4",
+								"text": "Header3"
+							},
+							"name": "Column4",
+							"footer": {
+								"name": "Footer4"
+							},
+							"dataSource": "This:C1470.location",
+							"width": 128,
+							"enterable": false
+						}
+					]
+				},
+				"Rectangle5": {
+					"type": "rectangle",
+					"top": 492,
+					"left": 0,
+					"width": 456,
+					"height": 34,
+					"stroke": "transparent",
+					"fill": "#337DB6"
+				},
+				"Text4": {
+					"type": "text",
+					"text": "Destination Countries",
+					"top": 501,
+					"left": 98,
+					"width": 191,
+					"height": 16,
+					"stroke": "#FFFFFF",
+					"fontWeight": "bold"
+				},
+				"Static Picture5": {
+					"type": "picture",
+					"top": 497,
+					"left": 65,
+					"width": 24,
+					"height": 24,
+					"picture": "/RESOURCES/image/categoryIcon/worldmap.png",
+					"pictureFormat": "scaled"
+				},
+				"Rectangle6": {
+					"type": "rectangle",
+					"top": 526,
+					"left": 0,
+					"width": 60,
+					"height": 201,
+					"stroke": "#FFFFFF",
+					"fill": "#c0c0c0",
+					"sizingY": "grow"
+				},
+				"Static Picture6": {
+					"type": "picture",
+					"top": 533,
+					"left": 12,
+					"width": 36,
+					"height": 38,
+					"picture": "/RESOURCES/image/categoryIcon/country.png",
+					"pictureFormat": "scaled"
+				},
+				"LB_destinationCountries": {
+					"type": "listbox",
+					"left": 60,
+					"top": 526,
+					"width": 396,
+					"height": 201,
+					"events": [
+						"onClick",
+						"onHeaderClick",
+						"onDataChange",
+						"onSelectionChange"
+					],
+					"showHeaders": false,
+					"horizontalLineStroke": "transparent",
+					"verticalLineStroke": "transparent",
+					"borderStyle": "none",
+					"scrollbarHorizontal": "hidden",
+					"listboxType": "collection",
+					"fill": "#DFDFDF",
+					"alternateFill": "#E8E8E8",
+					"dataSource": "Form:C1466.Country.airports.departureLines.toAirport.country",
+					"sizingY": "grow",
+					"scrollbarVertical": "visible",
+					"resizingMode": "legacy",
+					"columns": [
+						{
+							"header": {
+								"text": "Header1",
+								"name": "Header9"
+							},
+							"name": "Column9",
+							"footer": {
+								"name": "Footer9"
+							},
+							"dataSource": "This:C1470.codes.IATA",
+							"width": 50,
+							"dataSourceTypeHint": "picture",
+							"enterable": false
+						},
+						{
+							"header": {
+								"name": "Header10",
+								"text": "Header2"
+							},
+							"name": "Column10",
+							"footer": {
+								"name": "Footer10"
+							},
+							"dataSource": "This:C1470.name",
+							"width": 140,
+							"enterable": false
+						},
+						{
+							"header": {
+								"name": "Header11",
+								"text": "Header3"
+							},
+							"name": "Column11",
+							"footer": {
+								"name": "Footer11"
+							},
+							"dataSource": "This:C1470.continent",
+							"width": 128,
+							"enterable": false
+						},
+						{
+							"header": {
+								"name": "Header12",
+								"text": "Header3"
+							},
+							"name": "Column12",
+							"footer": {
+								"name": "Footer12"
+							},
+							"dataSource": "This:C1470.tinyFlag",
+							"width": 30,
+							"dataSourceTypeHint": "picture",
+							"pictureFormat": "proportionalTopLeft",
+							"verticalAlign": "middle",
+							"enterable": false
+						}
+					]
+				},
+				"Rectangle7": {
+					"type": "rectangle",
+					"top": 0,
+					"left": 456,
+					"width": 60,
+					"height": 219,
+					"stroke": "#FFFFFF",
+					"fill": "#c0c0c0"
+				},
+				"Rectangle8": {
+					"type": "rectangle",
+					"top": 0,
+					"left": 515,
+					"width": 380,
+					"height": 219,
+					"stroke": "#FFFFFF",
+					"fill": "#DFDFDF"
+				},
+				"Static Picture7": {
+					"type": "picture",
+					"top": 6,
+					"left": 469,
+					"width": 36,
+					"height": 36,
+					"picture": "/RESOURCES/image/categoryIcon/twocards.png",
+					"pictureFormat": "scaled"
+				},
+				"Input5": {
+					"type": "input",
+					"left": 525,
+					"top": 6,
+					"width": 359,
+					"height": 205,
+					"dataSource": "Form:C1466.Country.bigFlag",
+					"enterable": false,
+					"focusable": false,
+					"fill": "transparent",
+					"borderStyle": "none",
+					"dataSourceTypeHint": "picture",
+					"pictureFormat": "proportionalTopLeft"
+				},
+				"Rectangle9": {
+					"type": "rectangle",
+					"top": 219,
+					"left": 456,
+					"width": 440,
+					"height": 34,
+					"stroke": "transparent",
+					"fill": "#337DB6"
+				},
+				"Text5": {
+					"type": "text",
+					"text": "Local time",
+					"top": 228,
+					"left": 554,
+					"width": 191,
+					"height": 16,
+					"stroke": "#FFFFFF",
+					"fontWeight": "bold"
+				},
+				"Static Picture8": {
+					"type": "picture",
+					"top": 224,
+					"left": 521,
+					"width": 24,
+					"height": 24,
+					"picture": "/RESOURCES/image/categoryIcon/information.png",
+					"pictureFormat": "scaled"
+				},
+				"Rectangle10": {
+					"type": "rectangle",
+					"top": 253,
+					"left": 456,
+					"width": 60,
+					"height": 241,
+					"stroke": "#FFFFFF",
+					"fill": "#c0c0c0"
+				},
+				"Rectangle11": {
+					"type": "rectangle",
+					"top": 253,
+					"left": 515,
+					"width": 380,
+					"height": 241,
+					"stroke": "#FFFFFF",
+					"fill": "#DFDFDF"
+				},
+				"Rectangle14": {
+					"type": "rectangle",
+					"top": 492,
+					"left": 456,
+					"width": 440,
+					"height": 34,
+					"stroke": "transparent",
+					"fill": "#337DB6"
+				},
+				"List Box1": {
+					"type": "listbox",
+					"left": 62,
+					"top": 71,
+					"width": 96,
+					"height": 143,
+					"events": [
+						"onClick",
+						"onHeaderClick",
+						"onDataChange",
+						"onSelectionChange"
+					],
+					"showHeaders": false,
+					"horizontalLineStroke": "transparent",
+					"verticalLineStroke": "transparent",
+					"borderStyle": "none",
+					"scrollbarHorizontal": "hidden",
+					"listboxType": "collection",
+					"fill": "transparent",
+					"alternateFill": "#E8E8E8",
+					"dataSource": "OB Entries:C1720(Form:C1466.Country.codes).orderBy(\"key\")",
+					"resizingMode": "legacy",
+					"scrollbarVertical": "hidden",
+					"selectionMode": "none",
+					"focusable": false,
+					"columns": [
+						{
+							"header": {
+								"text": "Header1",
+								"name": "Header5"
+							},
+							"name": "Column5",
+							"footer": {
+								"name": "Footer5"
+							},
+							"dataSource": "This:C1470.key",
+							"width": 50,
+							"enterable": false,
+							"stroke": "#808080"
+						},
+						{
+							"header": {
+								"name": "Header6",
+								"text": "Header2"
+							},
+							"name": "Column6",
+							"footer": {
+								"name": "Footer6"
+							},
+							"dataSource": "This:C1470.value",
+							"enterable": false,
+							"width": 30,
+							"textAlign": "left"
+						}
+					]
+				},
+				"Clock": {
+					"type": "subform",
+					"top": 261,
+					"left": 519,
+					"width": 146,
+					"height": 144,
+					"sizingX": "fixed",
+					"sizingY": "fixed",
+					"dataSourceTypeHint": "integer",
+					"detailForm": "TimeDisplay",
+					"focusable": false,
+					"hideFocusRing": true,
+					"doubleClickInRowAction": "editSubrecord",
+					"selectionMode": "multiple",
+					"printFrame": "variable",
+					"events": [
+						"onLoad"
+					],
+					"dataSource": "Form:C1466.time"
+				},
+				"Subform1": {
+					"type": "subform",
+					"top": 409,
+					"left": 519,
+					"width": 147,
+					"height": 35,
+					"dataSource": "Form:C1466.time",
+					"dataSourceTypeHint": "integer",
+					"detailForm": "TimeDisplayLCD",
+					"focusable": false,
+					"hideFocusRing": true,
+					"doubleClickInRowAction": "editSubrecord",
+					"selectionMode": "multiple",
+					"printFrame": "variable",
+					"events": [
+						"onLoad"
+					],
+					"sizingX": "fixed",
+					"sizingY": "fixed"
+				},
+				"Static Picture4": {
+					"type": "picture",
+					"top": 260,
+					"left": 467,
+					"width": 36,
+					"height": 36,
+					"picture": "/RESOURCES/image/categoryIcon/clock.png",
+					"pictureFormat": "scaled",
+					"sizingY": "fixed"
+				},
+				"Text6": {
+					"type": "text",
+					"text": "Airlines",
+					"top": 501,
+					"left": 553,
+					"width": 191,
+					"height": 16,
+					"stroke": "#FFFFFF",
+					"fontWeight": "bold"
+				},
+				"LB_airlines": {
+					"type": "listbox",
+					"left": 516,
+					"top": 526,
+					"width": 380,
+					"height": 201,
+					"events": [
+						"onClick",
+						"onHeaderClick",
+						"onDataChange",
+						"onSelectionChange"
+					],
+					"showHeaders": false,
+					"horizontalLineStroke": "transparent",
+					"verticalLineStroke": "transparent",
+					"borderStyle": "none",
+					"scrollbarHorizontal": "hidden",
+					"listboxType": "collection",
+					"fill": "#DFDFDF",
+					"alternateFill": "#E8E8E8",
+					"dataSource": "Form:C1466.Country.airlines",
+					"scrollbarVertical": "visible",
+					"sizingX": "fixed",
+					"sizingY": "grow",
+					"columns": [
+						{
+							"header": {
+								"text": "Header1",
+								"name": "Header3"
+							},
+							"name": "Column3",
+							"footer": {
+								"name": "Footer3"
+							},
+							"dataSource": "This:C1470.tinyLogo",
+							"width": 50,
+							"dataSourceTypeHint": "picture",
+							"pictureFormat": "proportionalTopLeft",
+							"enterable": false
+						},
+						{
+							"header": {
+								"text": "Header1",
+								"name": "Header13"
+							},
+							"name": "Column13",
+							"footer": {
+								"name": "Footer13"
+							},
+							"dataSource": "This:C1470.designator",
+							"width": 60,
+							"textAlign": "center",
+							"enterable": false
+						},
+						{
+							"header": {
+								"name": "Header15",
+								"text": "Header8"
+							},
+							"name": "Column15",
+							"dataSource": "This:C1470.name",
+							"footer": {
+								"name": "Footer15"
+							},
+							"width": 250,
+							"enterable": false
+						}
+					]
+				},
+				"Static Picture9": {
+					"type": "picture",
+					"top": 497,
+					"left": 525,
+					"width": 24,
+					"height": 24,
+					"picture": "/RESOURCES/image/categoryIcon/passport.png",
+					"pictureFormat": "scaled"
+				},
+				"Rectangle4": {
+					"type": "rectangle",
+					"top": 526,
+					"left": 456,
+					"width": 60,
+					"height": 201,
+					"stroke": "#FFFFFF",
+					"fill": "#c0c0c0",
+					"sizingY": "grow"
+				}
+			}
+		}
+	],
+	"geometryStamp": 241,
+	"editor": {
+		"activeView": "View 1",
+		"defaultView": "View 1",
+		"views": {
+			"View 1": {}
+		}
+	},
+	"method": "method.4dm"
+}

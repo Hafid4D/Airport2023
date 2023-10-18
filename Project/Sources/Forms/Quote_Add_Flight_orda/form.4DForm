@@ -1,0 +1,525 @@
+{
+	"destination": "detailScreen",
+	"rightMargin": 19,
+	"bottomMargin": 20,
+	"markerHeader": 15,
+	"markerBody": 200,
+	"markerBreak": 220,
+	"markerFooter": 240,
+	"events": [
+		"onLoad",
+		"onValidate",
+		"onClick",
+		"onOutsideCall",
+		"onDoubleClick",
+		"onDrop",
+		"onMenuSelect",
+		"onPluginArea",
+		"onDataChange",
+		"onDragOver",
+		"onTimer",
+		"onAfterKeystroke",
+		"onAfterEdit",
+		"onBeginDragOver",
+		"onBoundVariableChange",
+		"onPageChange"
+	],
+	"pageFormat": {
+		"paperName": "A4",
+		"paperWidth": "842pt",
+		"paperHeight": "595pt"
+	},
+	"pages": [
+		null,
+		{
+			"objects": {
+				"city_departure": {
+					"type": "input",
+					"top": 59,
+					"left": 179,
+					"width": 166,
+					"height": 13,
+					"fontFamily": "Lucida Grande",
+					"fontSize": 11,
+					"contextMenu": "none",
+					"events": [
+						"onLoad",
+						"onBeforeKeystroke",
+						"onDataChange"
+					],
+					"method": "ObjectMethods/city_departure.4dm"
+				},
+				"city_arrival": {
+					"type": "input",
+					"top": 83,
+					"left": 179,
+					"width": 166,
+					"height": 13,
+					"fontFamily": "Lucida Grande",
+					"fontSize": 11,
+					"contextMenu": "none",
+					"events": [
+						"onLoad",
+						"onBeforeKeystroke",
+						"onDataChange"
+					],
+					"method": "ObjectMethods/city_arrival.4dm"
+				},
+				"vExplo_add_var_d3": {
+					"type": "input",
+					"top": 106,
+					"left": 179,
+					"width": 126,
+					"height": 17,
+					"dataSource": "Form:C1466.date_departure",
+					"dataSourceTypeHint": "date",
+					"class": "x_Onglet",
+					"fontFamily": "Lucida Grande",
+					"fontSize": 13,
+					"contextMenu": "none",
+					"events": [
+						"onDataChange"
+					]
+				},
+				"airport_from": {
+					"type": "dropdown",
+					"top": 55,
+					"left": 357,
+					"width": 259,
+					"height": 20,
+					"class": "x_List",
+					"fontFamily": "Lucida Grande",
+					"fontSize": 14,
+					"events": [
+						"onClick",
+						"onDataChange"
+					],
+					"method": "ObjectMethods/airport_from.4dm"
+				},
+				"airport_to": {
+					"type": "dropdown",
+					"top": 79,
+					"left": 357,
+					"width": 259,
+					"height": 20,
+					"class": "x_List",
+					"fontFamily": "Lucida Grande",
+					"fontSize": 14,
+					"events": [
+						"onClick",
+						"onDataChange"
+					],
+					"method": "ObjectMethods/airport_to.4dm"
+				},
+				"bExplo_Cancel": {
+					"type": "button",
+					"top": 409,
+					"left": 430,
+					"width": 158,
+					"height": 25,
+					"sizingX": "move",
+					"sizingY": "move",
+					"action": "cancel",
+					"text": "Annuler",
+					"class": "x_Bouton",
+					"fontFamily": "Lucida Grande",
+					"fontSize": 12,
+					"events": [
+						"onClick"
+					]
+				},
+				"bExplo_Add": {
+					"type": "button",
+					"top": 409,
+					"left": 608,
+					"width": 158,
+					"height": 25,
+					"sizingX": "move",
+					"sizingY": "move",
+					"action": "accept",
+					"text": "Ajouter",
+					"class": "x_Bouton",
+					"fontFamily": "Lucida Grande",
+					"fontSize": 12,
+					"defaultButton": true,
+					"events": [
+						"onClick"
+					]
+				},
+				"Texte": {
+					"type": "text",
+					"top": 15,
+					"left": 17,
+					"width": 365,
+					"height": 19,
+					"fontFamily": "Lucida Grande",
+					"fontSize": 13,
+					"fontWeight": "bold",
+					"text": "Sélection d'un vol"
+				},
+				"Texte1": {
+					"type": "text",
+					"top": 59,
+					"left": 31,
+					"width": 136,
+					"height": 17,
+					"class": "x_Text",
+					"fontFamily": "Lucida Grande",
+					"fontSize": 13,
+					"text": "Départ"
+				},
+				"Texte2": {
+					"type": "text",
+					"top": 83,
+					"left": 31,
+					"width": 136,
+					"height": 17,
+					"class": "x_Text",
+					"fontFamily": "Lucida Grande",
+					"fontSize": 13,
+					"text": "Arrivée"
+				},
+				"Texte3": {
+					"type": "text",
+					"top": 106,
+					"left": 31,
+					"width": 136,
+					"height": 17,
+					"class": "x_Text",
+					"fontFamily": "Lucida Grande",
+					"fontSize": 13,
+					"text": "Date départ"
+				},
+				"flight_lb": {
+					"type": "listbox",
+					"top": 162,
+					"left": 18,
+					"width": 748,
+					"height": 234,
+					"sizingX": "grow",
+					"sizingY": "grow",
+					"resizingMode": "legacy",
+					"listboxType": "collection",
+					"focusable": false,
+					"movableRows": false,
+					"rowHeight": "20px",
+					"showHeaders": false,
+					"dataSource": "Form:C1466.flights",
+					"currentItemSource": "Form:C1466.item",
+					"currentItemPositionSource": "Form:C1466.item_position",
+					"metaSource": "Travel_meta_info(This:C1470)",
+					"selectionMode": "single",
+					"scrollbarHorizontal": "hidden",
+					"horizontalLineStroke": "transparent",
+					"verticalLineStroke": "transparent",
+					"stroke": "#000000",
+					"fill": "#FFFFFF",
+					"fontFamily": "System Font Regular",
+					"fontSize": 12,
+					"events": [
+						"onClick"
+					],
+					"method": "ObjectMethods/flight_lb.4dm",
+					"columns": [
+						{
+							"name": "Colonne1",
+							"dataSource": "This:C1470.pict",
+							"width": 20,
+							"minWidth": 10,
+							"maxWidth": 32000,
+							"stroke": "#000000",
+							"fill": "#FFFFFF",
+							"fontFamily": "System Font Regular",
+							"fontSize": 12,
+							"events": [
+								"onClick",
+								"onDataChange"
+							],
+							"header": {
+								"name": "Entête1",
+								"text": "Entête1",
+								"stroke": "#000000",
+								"fontFamily": "System Font Regular",
+								"fontSize": 12
+							},
+							"footer": {
+								"name": "Pied1",
+								"timeFormat": "hh_mm_ss",
+								"stroke": "#000000",
+								"fill": "#FFFFFF",
+								"fontFamily": "System Font Regular",
+								"fontSize": 12
+							}
+						},
+						{
+							"name": "Colonne6",
+							"dataSource": "Travel_display(This:C1470)",
+							"width": 120,
+							"minWidth": 10,
+							"maxWidth": 32000,
+							"stroke": "#000000",
+							"fill": "#FFFFFF",
+							"fontFamily": "Police système",
+							"fontSize": 14,
+							"fontWeight": "bold",
+							"events": [
+								"onClick",
+								"onDataChange"
+							],
+							"header": {
+								"name": "Entête6",
+								"text": "Entête6",
+								"stroke": "#000000",
+								"fontFamily": "System Font Regular",
+								"fontSize": 12
+							},
+							"footer": {
+								"name": "Pied6",
+								"timeFormat": "hh_mm_ss",
+								"stroke": "#000000",
+								"fill": "#FFFFFF",
+								"fontFamily": "System Font Regular",
+								"fontSize": 12
+							}
+						},
+						{
+							"name": "Colonne2",
+							"dataSource": "This:C1470.from",
+							"width": 200,
+							"minWidth": 10,
+							"maxWidth": 32000,
+							"stroke": "#000000",
+							"fill": "#FFFFFF",
+							"fontFamily": "System Font Regular",
+							"fontSize": 12,
+							"events": [
+								"onClick",
+								"onDataChange"
+							],
+							"header": {
+								"name": "Entête2",
+								"text": "Entête2",
+								"stroke": "#000000",
+								"fontFamily": "System Font Regular",
+								"fontSize": 12
+							},
+							"footer": {
+								"name": "Pied2",
+								"timeFormat": "hh_mm_ss",
+								"stroke": "#000000",
+								"fill": "#FFFFFF",
+								"fontFamily": "System Font Regular",
+								"fontSize": 12
+							}
+						},
+						{
+							"name": "Colonne4",
+							"dataSource": "This:C1470.from_time",
+							"width": 100,
+							"minWidth": 10,
+							"maxWidth": 32000,
+							"stroke": "#000000",
+							"fill": "#FFFFFF",
+							"fontFamily": "System Font Regular",
+							"fontSize": 12,
+							"events": [
+								"onClick",
+								"onDataChange"
+							],
+							"header": {
+								"name": "Entête4",
+								"text": "Entête4",
+								"stroke": "#000000",
+								"fontFamily": "System Font Regular",
+								"fontSize": 12
+							},
+							"footer": {
+								"name": "Pied4",
+								"timeFormat": "hh_mm_ss",
+								"stroke": "#000000",
+								"fill": "#FFFFFF",
+								"fontFamily": "System Font Regular",
+								"fontSize": 12
+							}
+						},
+						{
+							"name": "Colonne3",
+							"dataSource": "This:C1470.to",
+							"width": 200,
+							"minWidth": 10,
+							"maxWidth": 32000,
+							"stroke": "#000000",
+							"fill": "#FFFFFF",
+							"fontFamily": "System Font Regular",
+							"fontSize": 12,
+							"events": [
+								"onClick",
+								"onDataChange"
+							],
+							"header": {
+								"name": "Entête3",
+								"text": "Entête3",
+								"stroke": "#000000",
+								"fontFamily": "System Font Regular",
+								"fontSize": 12
+							},
+							"footer": {
+								"name": "Pied3",
+								"timeFormat": "hh_mm_ss",
+								"stroke": "#000000",
+								"fill": "#FFFFFF",
+								"fontFamily": "System Font Regular",
+								"fontSize": 12
+							}
+						},
+						{
+							"name": "Colonne5",
+							"dataSource": "This:C1470.to_time",
+							"width": 93,
+							"minWidth": 10,
+							"maxWidth": 32000,
+							"stroke": "#000000",
+							"fill": "#FFFFFF",
+							"fontFamily": "System Font Regular",
+							"fontSize": 12,
+							"events": [
+								"onClick",
+								"onDataChange"
+							],
+							"header": {
+								"name": "Entête5",
+								"text": "Entête5",
+								"stroke": "#000000",
+								"fontFamily": "System Font Regular",
+								"fontSize": 12
+							},
+							"footer": {
+								"name": "Pied5",
+								"timeFormat": "hh_mm_ss",
+								"stroke": "#000000",
+								"fill": "#FFFFFF",
+								"fontFamily": "System Font Regular",
+								"fontSize": 12
+							}
+						}
+					]
+				},
+				"bRechercher": {
+					"type": "button",
+					"top": 76,
+					"left": 636,
+					"width": 130,
+					"height": 27,
+					"sizingX": "move",
+					"dataSource": "bRechercher",
+					"text": "Chercher",
+					"class": "x_Bouton",
+					"fontFamily": "Lucida Grande",
+					"fontSize": 12,
+					"events": [
+						"onClick"
+					],
+					"method": "ObjectMethods/bRechercher.4dm"
+				},
+				"vExplo_add_var_h4": {
+					"type": "input",
+					"top": 106,
+					"left": 488,
+					"width": 126,
+					"height": 17,
+					"dataSource": "Form:C1466.time_departure",
+					"dataSourceTypeHint": "time",
+					"class": "x_Onglet",
+					"fontFamily": "Lucida Grande",
+					"fontSize": 13,
+					"contextMenu": "none",
+					"timeFormat": "hh_mm",
+					"events": [
+						"onDataChange"
+					]
+				},
+				"Texte4": {
+					"type": "text",
+					"top": 106,
+					"left": 340,
+					"width": 136,
+					"height": 17,
+					"class": "x_Text",
+					"fontFamily": "Lucida Grande",
+					"fontSize": 13,
+					"text": "Heure départ"
+				},
+				"zs_resultat": {
+					"type": "input",
+					"top": 129,
+					"left": 221,
+					"width": 393,
+					"height": 22,
+					"dataSource": "zs_resultat",
+					"class": "x_Big_Text",
+					"fontFamily": "Lucida Grande",
+					"fontSize": 18,
+					"focusable": false,
+					"fill": "transparent",
+					"borderStyle": "none",
+					"enterable": false,
+					"contextMenu": "none",
+					"dragging": "none",
+					"dropping": "custom",
+					"events": [
+						"onDataChange"
+					],
+					"textAlign": "center"
+				},
+				"duration": {
+					"type": "input",
+					"top": 130,
+					"left": 197,
+					"width": 166,
+					"height": 21,
+					"dataSource": "Form:C1466.duration",
+					"stroke": "#DC143C",
+					"fontFamily": "Lucida Grande",
+					"fontSize": 18,
+					"focusable": false,
+					"fill": "transparent",
+					"borderStyle": "none",
+					"enterable": false,
+					"contextMenu": "none",
+					"events": [
+						"onLoad",
+						"onBeforeKeystroke",
+						"onDataChange"
+					],
+					"method": "ObjectMethods/duration.4dm"
+				},
+				"Case à cocher": {
+					"type": "checkbox",
+					"top": 8,
+					"left": 652,
+					"width": 107,
+					"height": 21,
+					"dataSource": "zsMath",
+					"text": "Use AJ_Math",
+					"focusable": false,
+					"events": [
+						"onClick"
+					]
+				}
+			}
+		}
+	],
+	"$4d": {
+		"version": "1",
+		"kind": "form"
+	},
+	"editor": {
+		"activeView": "View 1",
+		"defaultView": "View 1",
+		"views": {
+			"View 1": {}
+		}
+	},
+	"geometryStamp": 38,
+	"method": "method.4dm"
+}

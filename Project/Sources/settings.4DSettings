@@ -1,0 +1,19 @@
+<?xml version="1.0" encoding="UTF-8"?><preferences stamp="9">
+	<com.4d>
+		<compiler>
+			<options compilation_path="1" error_file="true" symbol_file="true" target="all"/>
+			<typage default_for_button="2" default_for_numeric="1"/>
+		</compiler>
+		<database>
+			<cache adaptative="false" size_fixed="4000"/>
+		</database>
+		<server>
+			<network>
+				<options publication_name="Airport2023"/>
+			</network>
+		</server>
+		<interface>
+			<user color_scheme="light"/>
+		</interface>
+	</com.4d>
+</preferences>

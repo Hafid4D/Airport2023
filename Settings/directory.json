@@ -1,0 +1,40 @@
+{
+	"users": {
+		"designer": {
+			"alias": "Designer"
+		},
+		"administrator": {
+			"alias": "Administrator"
+		}
+	},
+	"groups": {
+		"New group": {
+			"users": [
+				"Administrator"
+			]
+		}
+	},
+	"sqlSchemaGranters": {
+		"DEFAULT_SCHEMA": {
+			"readOnlyAccessGroup": "*",
+			"readWriteAccessGroup": "*",
+			"allAccessGroup": ""
+		}
+	},
+	"remoteGranters": {
+		"web": "*",
+		"soap": "*",
+		"oci": "*",
+		"write": "*",
+		"view": "*",
+		"odbcPro": "*"
+	},
+	"settings": {
+		"localGenericWebUser": "Designer",
+		"designAccessGroup": "*",
+		"localMobileAccessGroupRW": "*",
+		"remoteMobileAccessGroupRW": "*",
+		"remoteGenericWebUser": "Designer",
+		"remoteDefaultUser": ""
+	}
+}
